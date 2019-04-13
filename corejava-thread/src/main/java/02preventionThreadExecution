@@ -15,7 +15,7 @@ yield() : It causes current executing thread to pause and give chance to other w
 		  will get chance to execute its depend upon Thread Scheduler. The thread which is yielded when it will get chance back again it depends upon Thread Scheduler.
 		  ======public static void yield();======
 		  
-join() : If thread wants to wait until completing some other thread then thread who wants to wait has to call join().
+join() : If thread wants to wait until completing some other thread, then thread who wants to wait has to call join().
 		 For example, if thread t1 wants to wait until completing t2, then t1 thread has to call join() on t2 thread object i.e t2.join() and t1 will go to waiting state. Once t2 completes then t1
 		 can continue its execution.
 		 
@@ -33,3 +33,16 @@ join() : If thread wants to wait until completing some other thread then thread 
          then both thread will wait forever and deadlocked.
          
          If thread t1 calls join() on same thread itself i.e t1.join() then thread will wait forever and deadlocked.
+         
+sleep() : If thread don't want to perform any operation for a particular amount of time , then thread can call sleep().
+		  ======public static void sleep(long ms) throws InterupptedException;======
+		  ======public static void sleep(long ms, int ns) throws InterupptedException;======
+		  
+How thread can interrupt another thread ?
+A thread can interrupt a sleeping thread or waiting thread by using interrupt() of Thread class.
+======public void interrupt();======
+
+A thread can interrupt another thread by calling interrupt() of Thread class.
+If the target thread is not in sleeping state or waiting state, then there is no impact of interrupt call immediately. Interrupt call be waited until target thread entered into sleeping or waiting state.
+If target thread entered into sleeping or waiting state, then immediately interrupt call will interrupt target thread.
+If target thread never entered into sleeping or waiting state then there is no impact of interrupt call on  target thread.
