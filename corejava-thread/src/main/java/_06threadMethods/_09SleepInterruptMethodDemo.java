@@ -14,7 +14,7 @@ class MyThreadN extends Thread {
 	}
 }
 
-public class _07SleepInterruptMethodDemo {
+public class _09SleepInterruptMethodDemo {
 
 	public static void main(String[] args) {
 		MyThreadN t = new MyThreadN();
