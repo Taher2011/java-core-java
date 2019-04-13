@@ -1,0 +1,16 @@
+How to prevent thread execution ?
+1)yield()
+2)join()
+3)sleep()
+
+Thread Priorities : Every thread in java has some priorities and default is 5(for remainig threads default priority will be inherited from parent to child).
+					The valid range of thread priorities is 1to 10 where 1 is min and 10 is max. Thread Scheduler uses priorities while allocatin processor, thread which is having highest priority
+					will get chance first.If 2 threads having same priorities then we can't expect exact execution order. If we set less than 1 or greater than 10 we will get IllegalArgumentException.
+					Thread.MIN_PRIORITY = 1
+					Thread.NORM_PRIORITY = 5
+					Thread.MAX_PRIORITY = 10
+
+yield() : It causes current executing thread to pause and give chance to other waiting threads of same priority. And Thread Scheduler is free to ignore call to yield(). If there is no waiting
+		  thread or all thread having low priority then same thread which is yielded can continue its execution. If multiple threads are waiting having same priority or higher then which thread will get chance
+		  to execute its depend upon Thread Scheduler. The thread which is yielded when it will get chance back again it depends upon Thread Scheduler.
+		  public static void yield();

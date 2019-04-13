@@ -1,5 +1,11 @@
 package _06threadMethods;
 
+/*
+Below program will cause Deadlock as main-thread is calling join() on child-thread object at line 31
+and inside run() child-thread is calling join() on main-thread object at line 15
+due to which both threads will wait forever.
+*/
+
 class MyThreadM extends Thread {
 
 	static Thread mainThreadObj;
