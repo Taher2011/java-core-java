@@ -1,0 +1,15 @@
+Executing several task simultaneously is the concept of multi-threading. There are 2 types of multi-tasking
+a) Process Based b) Thread Based
+
+Process Based : Executing several task simultaneously where each task is separate independent program(process)
+known as Process Based Multitasking. It is best suitable at OS level.
+For example, while typing a java program we can listen to audio and at the same we can download a file.
+
+Thread Based  : Executing several task simultaneously where each task is separate independent part of same program 
+known as Thread Based Multitasking and each independent part is called Thread.
+
+Main objective of multi-tasking is to reduce response time of the system and improve performance.
+
+Main important areas of multi-threading are web-servers, app-servers, video games and animations.
+
+Java provides rich standard API's for multi-threading.
