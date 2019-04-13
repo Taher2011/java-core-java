@@ -12,8 +12,8 @@ class MyThread extends Thread {
 public class _1DefiningThreadByExtendingThreadDemo {
 
 	public static void main(String[] args) {
-		MyThread t = new MyThread();
-		t.start();
+		MyThread t = new MyThread(); // thread instantiation
+		t.start();// starting of thread
 		for (int i = 0; i < 5; i++) {
 			System.out.println("main method called by Main thread " + Thread.currentThread().getName());
 		}
