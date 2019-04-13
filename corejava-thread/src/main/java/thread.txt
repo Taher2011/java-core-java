@@ -18,7 +18,30 @@ Thread Scheduler : It is part of JVM, when multiple threads are waiting for chan
 the thread will get executed is decided by Thread Scheduler. We can't expect exact algorithm followed by Thread Scheduler, its varied
 from JVM to JVM, hence we can't expect thread execution order and exact output.
 
+Threads can be created using 2 ways
+1) Extending Thread class
+2) Implementing Runnable interface
+
 start() : A call to start method creates a new thread i.e create new separate call stack for a thread and is responsible for the execution
 of run(). If run() gets called directly without invoking start(), no new thread will be created and its just normal method call executed by
 main thread. start() is responsible to register the thread within Thread scheduler and hence without executing start() there is no chance of
-starting new thread. Calling start() twice will result in IllegalThreadStateException.
+starting new thread. After starting new thread, if trying to restart same thread, will result in IllegalThreadStateException. If we override
+start() then overridden start() will be executed just like normal method and no new thread will get created. If we don't override run() 
+then Thread class run() will be executed which has empty implementation.
+
+Thread Class Constructors:
+1) Thread t = new Thread();
+
+2) Thread t = new Thread(Runnable r);
+
+3) Thread t = new Thread(String s);
+
+4) Thread t = new Thread(Runnable r, String s);
+
+5) Thread t = new Thread(ThreadGroup t, String s);
+
+6) Thread t = new Thread(ThreadGroup t, Runnable r);
+
+7) Thread t = new Thread(ThreadGroup t, Runnable r, String s);
+
+Thread.currentThread() provides reference to the currently executing thread.
