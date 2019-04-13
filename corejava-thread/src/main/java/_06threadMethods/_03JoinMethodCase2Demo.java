@@ -8,7 +8,7 @@ class MyThreadK extends Thread {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				System.out.println("exception because " + e.getMessage());
 			}
 		}
 	}
@@ -20,6 +20,7 @@ public class _03JoinMethodCase2Demo {
 		MyThreadK t = new MyThreadK();
 		t.start();
 		t.join(1000);
+		//t.interrupt();
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Main Thread");
 		}

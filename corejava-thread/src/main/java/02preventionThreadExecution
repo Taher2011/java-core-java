@@ -11,6 +11,25 @@ Thread Priorities : Every thread in java has some priorities and default is 5(fo
 					Thread.MAX_PRIORITY = 10
 
 yield() : It causes current executing thread to pause and give chance to other waiting threads of same priority. And Thread Scheduler is free to ignore call to yield(). If there is no waiting
-		  thread or all thread having low priority then same thread which is yielded can continue its execution. If multiple threads are waiting having same priority or higher then which thread will get chance
-		  to execute its depend upon Thread Scheduler. The thread which is yielded when it will get chance back again it depends upon Thread Scheduler.
-		  public static void yield();
+		  thread or all thread having low priority then same thread which is yielded can continue its execution. If multiple threads are waiting having same priority or higher then which thread
+		  will get chance to execute its depend upon Thread Scheduler. The thread which is yielded when it will get chance back again it depends upon Thread Scheduler.
+		  ======public static void yield();======
+		  
+join() : If thread wants to wait until completing some other thread then thread who wants to wait has to call join().
+		 For example, if thread t1 wants to wait until completing t2, then t1 thread has to call join() on t2 thread object i.e t2.join() and t1 will go to waiting state. Once t2 completes then t1
+		 can continue its execution.
+		 
+		 example : t1--> Venue Fixing Thread
+		 		   t2--> Wedding cards printing Thread (t2 has to wait until t1 completes, hence t2 call t1.join())
+		 		   t3--> Wedding cards distribution Thread (t3 has to wait until t2 completes, hence t3 call t2.join())
+         
+         ======public final void join() throws InterupptedException;======
+         ======public final void join(long ms) throws InterupptedException;======
+         ======public final void join(long ms, int ns) throws InterupptedException;======
+         
+         If two threads t1 an t2, 
+         if t1 calls join() on t2 thread object i.e t2.join() and t1 will entered in waiting state & 
+         if t2 calls join() on t1 thread object i.e t1.join() and t2 will entered in waiting state.
+         then both thread will wait forever and deadlocked.
+         
+         If thread t1 calls join() on same thread itself i.e t1.join() then thread will wait forever and deadlocked.
