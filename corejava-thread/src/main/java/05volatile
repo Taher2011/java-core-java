@@ -1,3 +1,7 @@
+
+Volatile : volatile is used to indicate that a variable's value will be modified by different threads.
+		   The value of this variable will never be cached thread-locally: all reads and writes will go straight to "main memory".
+
 Difference Between Static and Volatile :
 
 Static Variable: If two Threads(suppose t1 and t2) are accessing the same object and updating a variable which is declared as static then it means t1 and t2 can make their own local copy of the 
