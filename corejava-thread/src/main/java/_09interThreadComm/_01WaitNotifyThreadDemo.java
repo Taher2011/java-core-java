@@ -9,8 +9,8 @@ class ThreadA extends Thread {
 			System.out.println("Child thread started calculation");
 			for (int i = 0; i <= 5; i++) {
 				total = total + i;
-				System.out.println(total);
 			}
+			System.out.println("Total is " + total);
 			System.out.println("Child thread calling notify method");
 			this.notify();
 		}
@@ -26,8 +26,8 @@ public class _01WaitNotifyThreadDemo {
 		synchronized (t) {
 			System.out.println("Main thread calling wait method");
 			t.wait();
+			System.out.println("Main thread got notification call");
+			System.out.println("Total count is " + t.total);
 		}
-		System.out.println("Main thread got notification call");
-		System.out.println("total " + t.total);
 	}
 }
