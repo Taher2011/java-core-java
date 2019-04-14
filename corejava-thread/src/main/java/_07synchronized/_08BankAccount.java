@@ -1,7 +1,5 @@
 package _07synchronized;
 
-import com.sun.org.apache.bcel.internal.generic.ACONST_NULL;
-
 class BankAccount {
 
 	private double balance;
@@ -20,8 +18,7 @@ class BankAccount {
 	 */
 	public synchronized void deposit(double amount) {
 		balance = balance + amount;
-		System.out.println(amount + " deposited and balance amount is "
-				+ balance);
+		System.out.println(amount + " deposited and balance amount is " + balance);
 	}
 
 	public synchronized void withdraw(double amount) {
@@ -30,8 +27,7 @@ class BankAccount {
 			return;
 		}
 		balance = balance - amount;
-		System.out.println(amount + " withdrawn and balance amount is "
-				+ balance);
+		System.out.println(amount + " withdrawn and balance amount is " + balance);
 	}
 
 	public void checkBalance() {
@@ -87,14 +83,10 @@ public class _08BankAccount {
 	public static void main(String[] args) throws InterruptedException {
 		BankAccount bankAccount = new BankAccount(500.25);
 
-		BankAccountDepositThread accountThread1 = new BankAccountDepositThread(
-				bankAccount);
-		BankAccountWithdrawThread accountThread2 = new BankAccountWithdrawThread(
-				bankAccount);
-		BankAccountWithdrawThread accountThread3 = new BankAccountWithdrawThread(
-				bankAccount);
-		BankAccountGetbalanceThread accountThread4 = new BankAccountGetbalanceThread(
-				bankAccount);
+		BankAccountDepositThread accountThread1 = new BankAccountDepositThread(bankAccount);
+		BankAccountWithdrawThread accountThread2 = new BankAccountWithdrawThread(bankAccount);
+		BankAccountWithdrawThread accountThread3 = new BankAccountWithdrawThread(bankAccount);
+		BankAccountGetbalanceThread accountThread4 = new BankAccountGetbalanceThread(bankAccount);
 
 		accountThread1.start();
 		accountThread2.start();
