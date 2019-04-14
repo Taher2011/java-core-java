@@ -1,10 +1,11 @@
 Synchronization : When multiple threads are operating simultaneously on same java object, then there may be chance of data inconsistency. To overcome such problem synchronization is used.
 				  If method or blocked is declared as synchronized then at a time only one thread is allowed to access that method or block on given object to avoid data inconsistency.
 				  Then main advantage of synchronization is data inconsistency problem may resolved, but the main disadvantage is it increases waiting time of threads and creates performance
-				  issues. Internally synchronization concept is implemented by using lock. Every object has unique lock. Once thread get lock it is allowed to execute any synchronized method
-				  on that object. Once method execution completes automatically thread releases the lock.
-				  While thread executing synchronized method on given object, the remaining threads are not allowed to execute any other synchronized methods simultaneously on the same object,
-				  but remaining threads are allowed to execute non-synchronized methods simultaneously.
+				  issues. Internally synchronization concept is implemented by using lock. 
+				  Every object has unique lock. Once thread get lock it is allowed to execute any synchronized method on that object.
+				  Once method execution completes automatically thread releases the lock.
+				  While thread executing synchronized method on given object, the remaining threads are not allowed to execute same method or any other synchronized methods simultaneously
+				  on the same object, but remaining threads are allowed to execute non-synchronized methods simultaneously.
 				  
 				  Conclusion :
 				  If multiple threads are executing on same object, then synchronization is required.
@@ -12,8 +13,8 @@ Synchronization : When multiple threads are operating simultaneously on same jav
 				  
 Class level lock : Every class in java has a unique lock, if thread wants to execute static synchronized method then thread requires class level lock. Once thread get Class level lock, then it is
 				   allowed to execute any static synchronized method of that class, once method execution completes automatically it releases lock.
-				   While thread executing static synchronized method, the remaining threads are not allowed to execute any static synchronized method of that class simultaneously. But remaining
-				   threads are allowed to execute following methods simultaneously
+				   While thread executing static synchronized method, the remaining threads are not allowed to execute any static synchronized method of that class simultaneously either on same
+				   object or different object. But remaining threads are allowed to execute following methods simultaneously
 				   1) static methods
 				   2) instance methods
 				   3) synchronized instance methods.

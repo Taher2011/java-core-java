@@ -6,7 +6,7 @@ class MyThreadL extends Thread {
 
 	public void run() {
 		try {
-			mainThreadObj.join(10);
+			mainThreadObj.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

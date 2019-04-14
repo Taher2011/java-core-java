@@ -1,5 +1,11 @@
 package _07synchronized;
 
+/*
+ * While thread executing synchronized method on given object, the remaining threads are not allowed
+ * to execute same method or any other synchronized methods simultaneously on the same object, 
+ * but remaining threads are allowed to execute non-synchronized methods simultaneously.
+*/
+
 class Display5 {
 
 	public synchronized void displayN() {
