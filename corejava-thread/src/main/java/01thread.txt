@@ -28,7 +28,9 @@ start() : A call to start method creates a new thread i.e create new separate ca
 		  starting new thread. After starting new thread, if trying to restart same thread, will result in IllegalThreadStateException. If we override
 		  start() then overridden start() will be executed just like normal method and no new thread will get created. If we don't override run() 
 		  then Thread class run() will be executed which has empty implementation.
-
+		  ======public void start();======
+		  ======public void run();======
+		  
 Thread Class Constructors:
 1) Thread t = new Thread();
 

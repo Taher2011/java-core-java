@@ -25,7 +25,31 @@ Synchronized Block : If very few lines of code required synchronization then its
 
 Race Conditions : If multiple threads are operating simultaneously on same java objects, there may be chance of data inconsistency called as race condition. To overcome we can use synchronized.
 
- 				  
+Deadlock : If 2 threads are waiting for each other forever such infinite waiting is called deadlock. There are no resolution technique for deadlock, but several prevention techniques are available. 				  
+
+Starvation : Long waiting of threads where waiting never ends called deadlock. Whereas long waiting of thread where waiting ends at certain point called starvation.
+			 For example, low priority threads has to wait until completing all high priority threads, it may be long waiting but ends at certain point.
+			 
+Daemon Threads : The threads which are executing in the background are called Daemon threads. The main objective of daemon thread is to provide support for non-daemon thread.
+				 For example : GarbageCollector, If main thread runs with low memory then jvm runs GC to destroy use-less objects.
+				 By default main thread is non-daemon and for all remaining threads daemon nature is inherited from parent to child. Its not possible to change daemon nature of main thread because
+				 its already started by jvm.
+				 Whenever last non-daemon thread terminates automatically all daemon threads will be terminated irrespective of their positions.
+				 
+				 We can check daemon nature of thread by using below method
+				 ======public boolean isDaemon();======
+				 
+				 We can change daemon nature of thread by using below method
+				 ======public void setDaemon(boolean b);======
+				 
+volatile : If value of variable keeps on changing by multiple threads then there may be chance of data inconsistency. To avoid such issue, volatile can be used.
+		   If variable declared as volatile then for every thread jvm creates separate local copy. Every updation performed by thread will takes place in local copy so that there is no effect on
+		   remaining threads.
+		   The main advantage is we can overcome data inconsistency but main disadvantage is creating and maintaining separate copy for every thread increases complexity and creates performance
+		   problem.
+		   Its almost deprecated.
+		     
+				 
 
 				  
 				  
