@@ -1,0 +1,18 @@
+InterThread Communications : Two threads can communicate with each other by using wait(), notify() and notifyAll().
+							 The thread which is expecting updation, is responsible to call wait(), then immediately the thread will enter into waiting state.
+							 The thread which is responsible for performing updation, is responsible to call notify(), then waiting thread will get that notification and continue its execution
+							 with those updated items.
+							 To call wait(), notify() and notifyAll() on any java object thread should be owner of that object i.e thread should has lock of that object i.e thread should be inside
+							 synchronized area. If wait(), notify() and notifyAll() may get called from outside of synchronized area we will get IllegalMonitorStateException.
+							 If thread call wait() on any object, it immediately release lock of that particular object and entered into waiting state.
+							 If thread call notify() on any object, it release lock of that particular object but may not immediately.
+							 
+							 ======public final void wait() throws InterupptedException;======
+         					 ======public final void wait(long ms) throws InterupptedException;======
+        					 ======public final void wait(long ms, int ns) throws InterupptedException;======
+        					 
+        					 ======public final void notify();======
+        					 ======public final void notifyAll();======
+        					 
+        					 If multiple thread are waiting then only one thread will be notified and remaining threads has to wait for further notification. Which thread will be notified we can't
+        					 expect, it depends on jvm.
