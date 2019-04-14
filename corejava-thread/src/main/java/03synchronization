@@ -42,14 +42,3 @@ Daemon Threads : The threads which are executing in the background are called Da
 				 We can change daemon nature of thread by using below method
 				 ======public void setDaemon(boolean b);======
 				 
-volatile : If value of variable keeps on changing by multiple threads then there may be chance of data inconsistency. To avoid such issue, volatile can be used.
-		   If variable declared as volatile then for every thread jvm creates separate local copy. Every updation performed by thread will takes place in local copy so that there is no effect on
-		   remaining threads.
-		   The main advantage is we can overcome data inconsistency but main disadvantage is creating and maintaining separate copy for every thread increases complexity and creates performance
-		   problem.
-		   Its almost deprecated.
-		     
-				 
-
-				  
-				  
