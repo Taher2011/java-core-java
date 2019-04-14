@@ -19,11 +19,11 @@ class MyThreadO extends Thread {
 	public void run() {
 		try {
 			for (int i = 0; i < 5; i++) {
-				System.out.println("Lazy Thread");
+				System.out.println("Lazy Thread entering into Sleeping state");
 				Thread.sleep(1000);
 			}
 		} catch (InterruptedException e) {
-			System.out.println("exception because " + e.getMessage());
+			System.out.println("Exception because " + e.getMessage());
 		}
 	}
 }
