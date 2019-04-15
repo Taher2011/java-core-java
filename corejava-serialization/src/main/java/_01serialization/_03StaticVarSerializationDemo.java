@@ -18,18 +18,18 @@ public class _03StaticVarSerializationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 
-		Cow d1 = new Cow();
-		System.out.println("Before Serialization " + d1.a + " " + d1.b);
+		Cow c1 = new Cow();
+		System.out.println("Before Serialization " + c1.a + " " + c1.b);
 
 		FileOutputStream fos = new FileOutputStream("dog.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
-		oos.writeObject(d1);
+		oos.writeObject(c1);
 
 		FileInputStream fis = new FileInputStream("dog.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
-		Cow d2 = (Cow) ois.readObject();
+		Cow c2 = (Cow) ois.readObject();
 
-		System.out.println("After  DeSerialization " + d2.a + " " + d2.b);
+		System.out.println("After  DeSerialization " + c2.a + " " + c2.b);
 	}
 
 }

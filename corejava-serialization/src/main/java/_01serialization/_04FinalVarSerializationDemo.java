@@ -18,18 +18,18 @@ public class _04FinalVarSerializationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 
-		Lion d1 = new Lion();
-		System.out.println("Before Serialization " + d1.a + " " + d1.b);
+		Lion l1 = new Lion();
+		System.out.println("Before Serialization " + l1.a + " " + l1.b);
 
 		FileOutputStream fos = new FileOutputStream("dog.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
-		oos.writeObject(d1);
+		oos.writeObject(l1);
 
 		FileInputStream fis = new FileInputStream("dog.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
-		Lion d2 = (Lion) ois.readObject();
+		Lion l2 = (Lion) ois.readObject();
 
-		System.out.println("After  DeSerialization " + d2.a + " " + d2.b);
+		System.out.println("After  DeSerialization " + l2.a + " " + l2.b);
 	}
 
 }

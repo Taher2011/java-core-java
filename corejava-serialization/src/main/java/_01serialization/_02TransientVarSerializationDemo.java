@@ -19,18 +19,18 @@ public class _02TransientVarSerializationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 
-		Cat d1 = new Cat();
-		System.out.println("Before Serialization " + d1.a + " " + d1.b);
+		Cat c1 = new Cat();
+		System.out.println("Before Serialization " + c1.a + " " + c1.b);
 
 		FileOutputStream fos = new FileOutputStream("dog.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
-		oos.writeObject(d1);
+		oos.writeObject(c1);
 
 		FileInputStream fis = new FileInputStream("dog.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
-		Cat d2 = (Cat) ois.readObject();
+		Cat c2 = (Cat) ois.readObject();
 
-		System.out.println("After  DeSerialization " + d2.a + " " + d2.b);
+		System.out.println("After  DeSerialization " + c2.a + " " + c2.b);
 	}
 
 }

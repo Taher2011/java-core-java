@@ -1,0 +1,37 @@
+Serialization : Process of writing an state of object to file is called serialization. Its process of converting java supported object form into either file supported form or network supported form.
+				By using FileOutputStream and ObjectOutputStream serialization can be implemented.
+				
+Deserialization :  Process of reading an state of object from file is called deserialization. Its process of converting file supported object form or network supported object form into java supported
+			       object form.
+			       By using FileInputStream and ObjectInputStream deserialization can be implemented.
+			       
+If trying to serialize non-serialize object i.e class which doesn't implement Serializable interface then NotSerializableException occured.
+			       
+			       
+transient : At the time of Serialization if we don't want to save particular field due to security constraints then field can be markes as transient.
+		    While performing Serialization jvm ignores the original values of transient field and save default value to the file.
+		    Hence transient means not Serializable.
+		    
+transient v/s static : Serialization is related to object and hence static is not part of object so it won;t participate in Serialization. So declaring static variable as transient makes no sense.
+
+final v/s transient : final variable participate in Serialization directly by the value at compile time only so declaring final variable as transient there is no impact.
+
+================================Declaration | Output================================
+                                
+                          int i = 10;       | 		10   20
+                          int j = 20;       |
+                                            |
+               transient int i = 10;        | 		0    20                |
+                         int j = 20;        |
+                                            | 		
+        transient static int i = 10;        | 	    10   0             
+               transient int j = 20;        | 		       
+                                            | 		
+              transient  int i = 10;        | 	    0    20             
+         transient final int j = 20;        | 		                                                   
+                                            | 		
+        transient static int i = 10;        | 	    10   20             
+         transient final int j = 20;        | 		          
+         
+         
+ Any number of objects can be serailized to file but in which order it serailized in the same order have to be deserialized i.e order of objects is important in serialization.                                           
