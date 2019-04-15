@@ -9,9 +9,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-/* Advantage of Externalizable over Serializable 
+/*
+ * Advantage of Externalizable over Serializable 
  * is that we can save either total object or part 
- * of object i.e. particular variables*/
+ * of object i.e. particular variables
+*/
+
 class Student implements Externalizable {
 
 	String name;
@@ -30,13 +33,13 @@ class Student implements Externalizable {
 		this.age = age;
 	}
 
-	public void writeExternal(ObjectOutput oo) throws IOException { // It is callback method automatically called by jvm while serialization i.e. at line 55
+	public void writeExternal(ObjectOutput oo) throws IOException { // It is callback method automatically called by jvm while serialization i.e. at line 57
 		oo.writeObject(name);
 		oo.writeInt(id);
 	}
 
 	public void readExternal(ObjectInput oi) throws IOException,
-			ClassNotFoundException { // It is callback method automatically called by jvm while deserialization i.e. at line 59
+			ClassNotFoundException { // It is callback method automatically called by jvm while deserialization i.e. at line 64
 		name = (String) oi.readObject();
 		id = oi.readInt();
 	}
