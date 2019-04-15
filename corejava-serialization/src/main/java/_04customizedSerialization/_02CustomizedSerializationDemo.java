@@ -9,7 +9,9 @@ import java.io.Serializable;
 
 /* During default serialization there may be chance of loss of information
  * due to transient variable. To recover this loss of information,
- * we use Customized serialization*/
+ * we use Customized serialization
+*/
+
 class Accounts implements Serializable {
 
 	String userName = "tali";
@@ -18,7 +20,7 @@ class Accounts implements Serializable {
 
 	private void writeObject(ObjectOutputStream oos) throws Exception { //It is callback method automatically called by jvm while serialization i.e. at line 47
 		oos.defaultWriteObject();
-		String encryptedPassword = "123" + password;
+		String encryptedPassword =  "123" + password;
 		oos.writeObject(encryptedPassword);
 		int encryptedPin = 1234+1234;
 		oos.writeInt(encryptedPin);
@@ -39,8 +41,8 @@ public class _02CustomizedSerializationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 		Accounts a1 = new Accounts();
-		System.out.println("Before Serialization UserName " + a1.userName
-				+ " and Password " + a1.password + " and Pin " + a1.pin);
+		System.out.println("Before Serialization UserName : " + a1.userName
+				+ " and Password : " + a1.password + " and Pin : " + a1.pin);
 
 		FileOutputStream fos = new FileOutputStream("accounts.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -51,8 +53,8 @@ public class _02CustomizedSerializationDemo {
 		FileInputStream fis = new FileInputStream("accounts.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Accounts a2 = (Accounts) ois.readObject();
-		System.out.println("After DeSerialization UserName " + a2.userName
-				+ " and Password " + a1.password + " and Pin " + a1.pin);
+		System.out.println("After DeSerialization UserName : " + a2.userName
+				+ " and Password : " + a1.password + " and Pin : " + a1.pin);
 
 	}
 

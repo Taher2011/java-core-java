@@ -7,10 +7,22 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+/*
+ * If Parent class doesn't implements serializable then we can serialize child
+ * object. At the time of Serialization jvm will check is any variable coming from
+ * non-serialize parent class or not if yes then jvm ignores original value and
+ * save default value. At the time of DeSerialization jvm will check is any
+ * parent class is non-serialized or not if any parent class is non-serialized
+ * then jvm will execute instance control flow in every non-serialized parent
+ * and share its instance var to the current object. If non-serialized parent
+ * class doesn't contain default constructor then we will get runtime exception
+ * InvalidClassException.
+ */
+
 class Company {
 	int i = 10;
 
-	public Company() {// no-arg constructor is must for non-serializable parent class because its being called while deserailization
+	public Company() {// no-arg constructor is must for non-serializable parent class because its being called while deserialization
 		super();
 		System.out.println("Company Constructor called");
 	}
@@ -26,17 +38,6 @@ class Employee extends Company implements Serializable {
 	}
 }
 
-/*
- * If Parent class doesn't implements serializable then we can serialize child
- * object. At the time of Serialization jvm will check is any var coming from
- * non-serialize parent class or not if yes then jvm ignores original value and
- * save default value. At the time of DeSerialization jvm will check is any
- * parent class is non-serialized or not if any parent class is non-serialized
- * then jvm will execute instance control flow in every non-serialized parent
- * and share its instance var to the current object. If non-serialized parent
- * class doesn't contain default constructor then we will get runtime exception
- * InvalidClassException.
- */
 public class _02ChildImplementsSerializableDemo {
 
 	public static void main(String[] args) throws IOException,

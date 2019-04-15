@@ -34,4 +34,8 @@ final v/s transient : final variable participate in Serialization directly by th
          transient final int j = 20;        | 		          
          
          
- Any number of objects can be serailized to file but in which order it serailized in the same order have to be deserialized i.e order of objects is important in serialization.                                           
+ Any number of objects can be serialized to file but in which order it serialized in the same order have to be deserialized i.e order of objects is important in serialization. If we don't follow
+ order we get ClassCastException.                
+ 
+ Whenever we are serializing an object, set of all objects which are reachable from that object will be serialized automatically. If atleast one of object is not serializable then we get
+ NotSerializableException.                           
