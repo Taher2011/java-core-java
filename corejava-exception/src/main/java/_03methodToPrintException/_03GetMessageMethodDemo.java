@@ -1,5 +1,9 @@
 package _03methodToPrintException;
 
+/*
+ * Description of Exception
+ */
+
 public class _03GetMessageMethodDemo {
 
 	public static void main(String[] args) {

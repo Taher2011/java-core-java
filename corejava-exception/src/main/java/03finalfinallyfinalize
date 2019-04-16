@@ -1,0 +1,14 @@
+final : Modifier applicable for classes, methods and variables.
+		If class declared as final we can't extend class i.e inheritance is not possible.
+		If method declared as final we can't override method in child classes.
+		If variable declared as final we can't change the value and reassignment for the variable.
+
+finally : It is a block always associated with try/catch to maintain clean up code i.e closing DB connection, File, NetworkConnection.
+		  It will be executed always irrespective of whether exception occured or not.
+
+finalize : It is a method always invoked by GC just before destroying an object to perform clean up activities. Once finalize completes
+	       immediately GC destroys that object.
+	       
+
+Finally block is responsible to perform clean up activities related to try block i.e whatever resources opened as part of try block will be closed inside finally block.
+Finalize method is responsible to perform clean up activities related to object i.e whatever resources associated with object will be deallocated before destroying an object.

@@ -1,5 +1,12 @@
 package _03methodToPrintException;
 
+/*
+ * Name of Excpetion: Description of Exception
+ *                 StackTrace. 
+ *                 
+ * Exception handler used printStackTrace() internally to print exception to console.
+ */
+
 public class _01PrintStackTraceMethodDemo {
 
 	public static void main(String[] args) {

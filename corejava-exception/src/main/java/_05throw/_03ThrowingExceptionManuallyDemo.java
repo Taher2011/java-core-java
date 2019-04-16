@@ -1,6 +1,6 @@
 package _05throw;
 
-public class _01ThrowingExceptionManuallyDemo {
+public class _03ThrowingExceptionManuallyDemo {
 
 	public static void doMoreStuff() {
 		System.out.println("doMoreStuff method");

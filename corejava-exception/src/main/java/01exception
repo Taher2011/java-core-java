@@ -1,0 +1,25 @@
+Exception : If unwanted unexpected event occurs that disrupt the normal flow of execution called exception. The main objective of exception handling is graceful termination of the program and to 
+	        provide alternate way to continue the rest of the program.
+	        
+Run-time stack mechanism : For every thread jvm creates separate run-time stack, each and every method call by that thread stored in corresponding stack. Each entry in the stack is called stack
+						   frame or activation record. After completing every method call corresponding entry from stack getting removed. After completing all method calls stack becomes empty and
+						   that stack will be destroyed by jvm just before terminating the thread.
+						   
+Default Exception handler mechanism : Inside any method if any exception occurs then that method in which it raised is responsible to create exception object by including following information.
+								      Name of exception, Description of exception, Location at which exception occurs i.e stack trace.
+									  After creating exception object method hands over that object to jvm. JVM will check whetehr the method contains anyexception handling code or not, if not 
+									  then jvm terminates that method abnormally and removes corresponding entry from stack. Then jvm identifies caller method and checks whether caller method 
+									  contains any exception handlin code or not, if not then jvmterminates caller method abnormally and removes corresponding entry from stack. This process 
+									  continues until main method. If main method also doesn't contain handling code, then jvm terminates main method also and removes corresponding entry from 
+									  stack. Then jvm hands over responsibility of exception handling to default exception handler which is part of jvm. Default exception handler prints exception 
+									  information in below format and terminates program abnormally
+									  Exception in thread "xxx" Name of exception: Description
+											                Stacktrace.
+											                
+Exception v/s Error : 
+					  Most of the time exceptions are caused by our program and these are recoverable, for example if our programming requirement is to read data from remote file locating at London
+	                  but at runtime if remote file isn't available then FileNotFoundException occurs. If FileNotFoundException occurs we can provide local file and continue the rest of the
+	                  program normally.
+	                  
+	                  Most of the time Error aren't caused by our program and these are due to lack of system resources. Errors are not recoverable for example if OutOfMemoryError occurs being
+	                  programmer we can't do anything and program will be terminated abnormally.  

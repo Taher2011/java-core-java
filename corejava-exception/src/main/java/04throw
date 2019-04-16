@@ -1,0 +1,32 @@
+Throw : Sometimes we create exception object explicitly and hand over to jvm manually for this we have to use throw.
+
+		throw new ArithmeticException("/by 0);
+		
+		throw - > handing over our created exception object to jvm manually.
+		new ArithmeticException("/by 0) - > creation of Arithmetic exception object explicitly.
+		
+		Main objective of throw is to handover created exception object to jvm.
+		
+		Best use of throw is for user defined exceptions or customized exceptions.
+		
+
+Class Test {
+	psvm() {
+		sop(10/0);
+	}
+}
+
+output : Exception in thread "main" java.lang.ArithmeticException: / by Zero at Test. main()
+
+
+Class Test {
+	psvm() {
+		throw new ArithmeticException("/by 0);
+	}
+}
+
+output : Exception in thread "main" java.lang.ArithmeticException: / by Zero at Test. main()
+
+
+At line 19 main method is responsible to create exception object and hand over to jvm.
+At line 28 programmer is responsible to create exception object explicitly and hand over to jvm.

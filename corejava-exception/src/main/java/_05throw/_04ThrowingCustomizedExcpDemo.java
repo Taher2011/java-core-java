@@ -20,7 +20,7 @@ class InsufficientAmountException extends Exception {
 
 }
 
-public class _02ThrowingCustomizedExcpDemo {
+public class _04ThrowingCustomizedExcpDemo {
 
 	public static void withdrawAmount(double amount, double balance) throws InsufficientAmountException {
 		if (amount > balance) {

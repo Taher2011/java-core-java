@@ -1,5 +1,10 @@
 package _02tryCatchExceptionHandling;
 
+/*
+ * If one method terminates abnormally then program termination is abnormal termination.
+ * If one method terminates normally then program termination is normal termination.
+*/
+
 public class _02TryCatchAbnormalTerminationDemo {
 
 	public static void doMoreStuff1() {

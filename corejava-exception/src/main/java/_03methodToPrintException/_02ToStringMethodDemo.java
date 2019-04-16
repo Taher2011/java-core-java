@@ -1,5 +1,11 @@
 package _03methodToPrintException;
 
+/*
+ * Name of Excpetion: Description of Exception
+ * 
+ * Exception object internally calls toString() to print exception to console.
+ */
+
 public class _02ToStringMethodDemo {
 
 	public static void main(String[] args) {
