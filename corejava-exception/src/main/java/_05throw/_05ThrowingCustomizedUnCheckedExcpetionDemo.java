@@ -20,7 +20,7 @@ class IncorrectPinException extends RuntimeException {
 
 }
 
-public class _05ThrowingCustomizedExcpDemo {
+public class _05ThrowingCustomizedUnCheckedExcpetionDemo {
 
 	public static void withdrawAmount(int providedPin) {
 		int pin = 1352;
