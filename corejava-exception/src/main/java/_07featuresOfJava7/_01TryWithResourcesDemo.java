@@ -19,13 +19,9 @@ class TryWithoutResourceDemo6 {
 
 class TryWithResourceDemo7 {
 
-	public void tryWithResource() {
+	public void tryWithResource() throws FileNotFoundException, IOException {
 		try (BufferedReader reader = new BufferedReader(new FileReader("b.txt"));) {
 			System.out.println(reader.hashCode());
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		} finally {
 			System.out.println("finally");
 		}
@@ -34,7 +30,7 @@ class TryWithResourceDemo7 {
 
 public class _01TryWithResourcesDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 		TryWithoutResourceDemo6 demo6 = new TryWithoutResourceDemo6();
 		demo6.tryWithoutResource();
 
