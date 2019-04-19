@@ -3,6 +3,7 @@ package _01innerClasses;
 public class _08InsideInnerClassThisReferCurrentObj {
 
 	int x = 10;
+	static int y = 20;
 
 	class Inner8 {
 		
@@ -12,6 +13,7 @@ public class _08InsideInnerClassThisReferCurrentObj {
 			System.out.println(x);
 			System.out.println(this.x);
 			System.out.println(_08InsideInnerClassThisReferCurrentObj.this.x);
+			System.out.println(_08InsideInnerClassThisReferCurrentObj.y);
 		}
 	}
 

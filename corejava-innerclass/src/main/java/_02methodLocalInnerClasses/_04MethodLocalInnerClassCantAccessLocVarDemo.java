@@ -6,6 +6,7 @@ public class _04MethodLocalInnerClassCantAccessLocVarDemo {
 
 		int x = 10;
 		final int y = 10;
+		
 		class Inner4 {
 
 			public void m2() {

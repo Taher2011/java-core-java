@@ -26,6 +26,12 @@ public class VehicleTypes {
 
 	public static void main(String[] args) {
 
+		VehicleTypes.Bus bus = new VehicleTypes().new Bus();
+		System.out.println(bus.getNoofWheels());
+		
+		VehicleTypes.Auto auto = new VehicleTypes().new Auto();
+		System.out.println(auto.getNoofWheels());
+
 	}
 
 }

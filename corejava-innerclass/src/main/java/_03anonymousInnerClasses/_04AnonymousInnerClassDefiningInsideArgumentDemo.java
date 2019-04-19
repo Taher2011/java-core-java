@@ -8,7 +8,7 @@ public class _04AnonymousInnerClassDefiningInsideArgumentDemo {
 
 			@Override
 			public void run() {
-				for (int i = 0; i < 5; i++) {
+				for (int i = 0; i < 2; i++) {
 					System.out.println("Child Thread using Anonymous approach");
 				}
 			}
@@ -16,7 +16,7 @@ public class _04AnonymousInnerClassDefiningInsideArgumentDemo {
 		
 		t.start();
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 2; i++) {
 			System.out.println("Main Thread");
 		}
 	}
