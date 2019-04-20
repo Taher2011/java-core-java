@@ -13,7 +13,7 @@ public class _01ImmutabilityConcept {
 
 	public static void main(String[] args) {
 		String s = new String("Ali");//new object will be created in heap and one in SCP, but s will be referred in heap
-		s.concat("1");//new object '1' will be created in SCP
+		s.concat("1");//new constant "1" object will be in SCP, and "Ali1" object will be created in heap because of runtime operation i.e concat()
 		System.out.println(s);
 
 		StringBuffer sb = new StringBuffer("Ali");
