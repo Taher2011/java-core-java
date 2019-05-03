@@ -25,9 +25,9 @@ public class DeserializeAccountDemo {
 	}
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		deserializeAccountWithUid();
-		System.out.println();
 		deserializeAccountWithoutUid();
+		System.out.println();
+		deserializeAccountWithUid();
 	}
 
 }

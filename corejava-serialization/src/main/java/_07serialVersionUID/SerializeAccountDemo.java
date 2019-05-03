@@ -18,11 +18,12 @@ public class SerializeAccountDemo {
 		FileOutputStream fos = new FileOutputStream("withoutuid.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(accountWithoutUid);
+		System.out.println("Serialized");
 	}
 
 	public static void main(String[] args) throws IOException {
-		serializeAccountWithUid();
 		serializeAccountWithoutUid();
+		serializeAccountWithUid();
 	}
 
 }
