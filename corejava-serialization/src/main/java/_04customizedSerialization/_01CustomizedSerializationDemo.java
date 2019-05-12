@@ -16,13 +16,13 @@ class Account implements Serializable {
 	String otp = "010";
 	transient String password = "ABCD";
 
-	private void writeObject(ObjectOutputStream oos) throws Exception { //It is callback method automatically called by jvm while serialization i.e. at line 42
+	private void writeObject(ObjectOutputStream oos) throws IOException  { //It is callback method automatically called by jvm while serialization i.e. at line 42
 		oos.defaultWriteObject();
 		String encryptedPassword = "123" + password;
 		oos.writeObject(encryptedPassword);
 	}
 
-	private void readObject(ObjectInputStream ois) throws Exception { //It is callback method automatically called by jvm while deserialization i.e. at line 46
+	private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException  { //It is callback method automatically called by jvm while deserialization i.e. at line 46
 		ois.defaultReadObject();
 		String decryptedPassword = (String) ois.readObject();
 		password = decryptedPassword.substring(3);
