@@ -32,7 +32,7 @@ public class _02HashSetConstructorDemo {
 		 */
 		ArrayList list = new ArrayList();
 		list.add(1);
-		list.add("A");
+		list.add(1);
 		System.out.println("List is " + list);
 		HashSet set3 = new HashSet(list);
 		System.out.println("equivalent HashSet is " + set3);
