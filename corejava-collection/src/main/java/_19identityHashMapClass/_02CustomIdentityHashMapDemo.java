@@ -57,7 +57,7 @@ public class _02CustomIdentityHashMapDemo {
 
 		IdentityHashMap<Person, String> identityHashMap = new IdentityHashMap<Person, String>();
 		identityHashMap.put(p1, "1");
-		identityHashMap.put(p4, "4");
+		identityHashMap.put(p1, "4");
 		identityHashMap.put(p2, "2");
 		identityHashMap.put(p3, "3");
 
