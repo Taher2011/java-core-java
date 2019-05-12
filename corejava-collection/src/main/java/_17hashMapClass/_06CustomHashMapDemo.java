@@ -58,7 +58,7 @@ public class _06CustomHashMapDemo {
 
 		HashMap<Person, String> personHashMap = new LinkedHashMap<Person, String>();
 		personHashMap.put(p1, "1");
-		personHashMap.put(p4, "4");
+		personHashMap.put(p1, "4");
 		personHashMap.put(p2, "2");
 		personHashMap.put(p3, "3");
 
