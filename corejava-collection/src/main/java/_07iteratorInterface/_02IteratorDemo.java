@@ -43,6 +43,8 @@ public class _02IteratorDemo {
 				// "java.util.ConcurrentModificationException"
 			} else {
 				iterator.remove();
+				// list.remove(1); //It gives
+				// "java.util.ConcurrentModificationException"
 			}
 		}
 		System.out.println(list);
