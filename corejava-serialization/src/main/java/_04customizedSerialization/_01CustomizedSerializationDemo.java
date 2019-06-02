@@ -35,8 +35,7 @@ public class _01CustomizedSerializationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 		Account a1 = new Account();
-		System.out.println("Before Serialization UserName " + a1.userName
-				+ " and Password " + a1.password + " and OTP " + a1.otp);
+		System.out.println("Before Serialization UserName " + a1.userName + " and Password " + a1.password + " and OTP " + a1.otp);
 
 		FileOutputStream fos = new FileOutputStream("account.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -45,8 +44,7 @@ public class _01CustomizedSerializationDemo {
 		FileInputStream fis = new FileInputStream("account.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Account a2 = (Account) ois.readObject();
-		System.out.println("After DeSerialization UserName " + a2.userName
-				+ " and Password " + a2.password + " and OTP " + a2.otp);
+		System.out.println("After DeSerialization UserName " + a2.userName + " and Password " + a2.password + " and OTP " + a2.otp);
 
 	}
 
