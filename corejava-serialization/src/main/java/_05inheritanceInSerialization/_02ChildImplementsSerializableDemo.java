@@ -46,8 +46,7 @@ public class _02ChildImplementsSerializableDemo {
 		e1.i = 30;
 		e1.j = 40;
 
-		System.out.println("Before Serialization i is " + e1.i + " and j is "
-				+ e1.j);
+		System.out.println("Before Serialization i is " + e1.i + " and j is " + e1.j);
 
 		FileOutputStream fos = new FileOutputStream("case2.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -58,8 +57,7 @@ public class _02ChildImplementsSerializableDemo {
 		FileInputStream fis = new FileInputStream("case2.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Employee e2 = (Employee) ois.readObject();
-		System.out.println("After DeSerialization i is " + e2.i + " and j is "
-				+ e2.j);
+		System.out.println("After DeSerialization i is " + e2.i + " and j is " + e2.j);
 	}
 
 }

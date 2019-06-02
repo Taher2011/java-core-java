@@ -51,8 +51,7 @@ public class _01ExternalizationDemo {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
 		Student s1 = new Student("Taher", 123, 30);
-		System.out.println("Before Serialization : Name:" + s1.name + " Id:"
-				+ s1.id + " Age:" + s1.age);
+		System.out.println("Before Serialization : Name:" + s1.name + " Id:" + s1.id + " Age:" + s1.age);
 		FileOutputStream fos = new FileOutputStream("student.ser");
 		ObjectOutputStream oos = new ObjectOutputStream(fos);
 		oos.writeObject(s1);
@@ -63,7 +62,6 @@ public class _01ExternalizationDemo {
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Student s2 = (Student) ois.readObject();
 
-		System.out.println("After Deserialization : Name:" + s2.name + " Id:"
-				+ s2.id + " Age:" + s2.age);
+		System.out.println("After Deserialization : Name:" + s2.name + " Id:" + s2.id + " Age:" + s2.age);
 	}
 }
