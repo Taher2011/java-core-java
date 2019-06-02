@@ -41,8 +41,8 @@ public class _01OrderInSerializationDemo {
 		FileInputStream fis = new FileInputStream("animal.ser");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Dog d2 = (Dog) ois.readObject();
+		Rat r2 = (Rat) ois.readObject(); // ClassCastException
 		Cat c2 = (Cat) ois.readObject();
-		Rat r2 = (Rat) ois.readObject();
 	}
 
 }
