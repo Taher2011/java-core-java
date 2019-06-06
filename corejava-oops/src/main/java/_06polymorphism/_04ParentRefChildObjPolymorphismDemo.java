@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Stack;
 import java.util.Vector;
 
-public class _03ParentRefChildObjPolymorphismDemo {
+public class _04ParentRefChildObjPolymorphismDemo {
 
 	// At runtime if we dont know exact runtime type of object then we should go
 	// for parent reference
@@ -28,7 +28,7 @@ public class _03ParentRefChildObjPolymorphismDemo {
 		List listLL = new LinkedList();
 		List listS = new Stack();
 		List listV = new Vector();
-		_03ParentRefChildObjPolymorphismDemo demo = new _03ParentRefChildObjPolymorphismDemo();
+		_04ParentRefChildObjPolymorphismDemo demo = new _04ParentRefChildObjPolymorphismDemo();
 
 		demo.testList(listAL);
 		demo.testList(listLL);

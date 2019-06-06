@@ -1,42 +1,42 @@
 package _06polymorphism;
 
-class ParentOR {
+class ParentOL {
 
 	public void abs(float i) {
 		System.out.println("Parent");
 	}
 
-	public ParentOR abs(ParentOR p) {
+	public void abs(ParentOL p) {
 		System.out.println("Parent");
-		return p;
 	}
 }
 
-class ChildOR extends ParentOR {
-	
-	public void abs(float i) {
+class ChildOL extends ParentOL {
+
+	public void abs(int i) {
 		System.out.println("Child");
 	}
 
-	public ParentOR abs(ParentOR c) {
+	public void abs(ChildOL c) {
 		System.out.println("Child");
-		return c;
 	}
 }
 
-public class _02OverridingPolymorphismDemo {
+public class _02OverloadingPolymorphismDemo {
 
 	public static void main(String[] args) {
-		ParentOR p = new ParentOR();
-		ChildOR c = new ChildOR();
-		ParentOR pc = new ChildOR();
+		ParentOL p = new ParentOL();
+		ChildOL c = new ChildOL();
+		ParentOL pc = new ChildOL();
 		
 		p.abs(10.2f);
+		p.abs(10);
 		p.abs(p);
 		
 		System.out.println();
 		
 		c.abs(10);
+		c.abs(10l);
 		c.abs(p);
 		c.abs(c);
 		

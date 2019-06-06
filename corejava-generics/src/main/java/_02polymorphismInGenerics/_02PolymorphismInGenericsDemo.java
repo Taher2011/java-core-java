@@ -21,11 +21,11 @@ public class _02PolymorphismInGenericsDemo {
 		// obj.genericList(list1); // method genericList(List<List>) in the type _02PolymorphismInGenericsDemo is not applicable for the arguments (List<ArrayList>)
 		
 		List<List> list2 = new ArrayList<List>();
-		obj.genericList(list2); 
-		
+		obj.genericList(list2);
+
 		ArrayList<List> list3 = new ArrayList<List>();
-		obj.genericList(list3); 
-		
+		obj.genericList(list3);
+
 		ArrayList<ArrayList> list4 = new ArrayList<ArrayList>();
 		obj.genericList(list4); 
 	}
