@@ -27,10 +27,7 @@ public class _01PolymorphismInGenericsDemo {
 		/* Valid */
 		Collection<String> l3 = new ArrayList<String>();
 
-		/*
-		 * InValid because polymorphism only applicable for BaseType but not for
-		 * TypeParameter, get compile time error saying incompatible types
-		 */
+		/*InValid because polymorphism only applicable for BaseType but not for TypeParameter, get compile time error saying incompatible types*/
 		// List<Object> l4 = new ArrayList<String>();
 
 	}
