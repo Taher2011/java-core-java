@@ -27,7 +27,7 @@ class D {
 // 2)It Suppresses Reusability
 // 3)It reduces maintainability
 
-public class _01CouplingDemo {
+public class _02CouplingDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
