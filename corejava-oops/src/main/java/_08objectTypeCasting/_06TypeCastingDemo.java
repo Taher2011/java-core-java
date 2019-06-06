@@ -1,6 +1,6 @@
 package _08objectTypeCasting;
 
-public class _02TypeCastingDemo {
+public class _06TypeCastingDemo {
 
 	public static void main(String[] args) {
 

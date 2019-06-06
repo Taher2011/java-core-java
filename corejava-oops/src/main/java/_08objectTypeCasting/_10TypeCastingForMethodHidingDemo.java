@@ -18,7 +18,7 @@ class C1 extends B1 {
 	}
 }
 
-public class _06TypeCastingForMethodHidingDemo {
+public class _10TypeCastingForMethodHidingDemo {
 
 	public static void main(String[] args) {
 		C1 c = new C1();

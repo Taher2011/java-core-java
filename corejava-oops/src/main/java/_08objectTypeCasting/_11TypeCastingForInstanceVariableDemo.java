@@ -12,7 +12,7 @@ class C2 extends B2 {
 	int x = 9;
 }
 
-public class _07TypeCastingForInstanceVariableDemo {
+public class _11TypeCastingForInstanceVariableDemo {
 
 	public static void main(String[] args) {
 		C2 c = new C2();

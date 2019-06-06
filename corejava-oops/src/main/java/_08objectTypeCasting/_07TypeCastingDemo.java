@@ -12,7 +12,7 @@ class Child extends Parent {
 	}
 }
 
-public class _04TypeCastingDemo {
+public class _07TypeCastingDemo {
 
 	public static void main(String[] args) {
 		Child c = new Child();

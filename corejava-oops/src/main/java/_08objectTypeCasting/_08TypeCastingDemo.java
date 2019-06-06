@@ -18,7 +18,7 @@ class Der3 extends Base2 {
 class Der4 extends Base2 {
 }
 
-public class _03TypeCastingDemo {
+public class _08TypeCastingDemo {
 
 	public static void main(String[] args) {
 		Object o = new String("S");

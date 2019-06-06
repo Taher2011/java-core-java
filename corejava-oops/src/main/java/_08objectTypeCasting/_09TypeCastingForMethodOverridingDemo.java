@@ -18,7 +18,7 @@ class C extends B {
 	}
 }
 
-public class _05TypeCastingForMethodOverridingDemo {
+public class _09TypeCastingForMethodOverridingDemo {
 
 	public static void main(String[] args) {
 		C c = new C();
