@@ -1,6 +1,6 @@
 package _07synchronized;
 
-class Display3 {
+class Display6 {
 
 	public static synchronized void displayC() {
 		for (int i = 65; i < 70; i++) {
@@ -13,7 +13,7 @@ class Display3 {
 		}
 	}
 
-	public static synchronized void displayN() {
+	public synchronized void displayN() {
 		for (int i = 0; i < 5; i++) {
 			System.out.print(i + " ");
 			try {
@@ -26,12 +26,12 @@ class Display3 {
 
 }
 
-class MyThread8 extends Thread {
+class MyThread10 extends Thread {
 
-	public Display3 display;
+	public Display6 display;
 	public String name;
 
-	public MyThread8(Display3 display) {
+	public MyThread10(Display6 display) {
 		super();
 		this.display = display;
 		this.name = name;
@@ -42,12 +42,12 @@ class MyThread8 extends Thread {
 	}
 }
 
-class MyThread9 extends Thread {
+class MyThread11 extends Thread {
 
-	public Display3 display;
+	public Display6 display;
 	public String name;
 
-	public MyThread9(Display3 display) {
+	public MyThread11(Display6 display) {
 		super();
 		this.display = display;
 		this.name = name;
@@ -66,10 +66,10 @@ public class _05StaticSynchronizedDemo {
 	 * case we will get regular output, because thread acquired class level lock
 	 */
 	public static void main(String[] args) {
-		Display3 display1 = new Display3();
-		Display3 display2 = new Display3();
-		MyThread8 t1 = new MyThread8(display1);
-		MyThread9 t2 = new MyThread9(display2);
+		Display6 display1 = new Display6();
+		Display6 display2 = new Display6();
+		MyThread10 t1 = new MyThread10(display1);
+		MyThread11 t2 = new MyThread11(display2);
 		t1.start();
 		t2.start();
 
