@@ -6,7 +6,7 @@ package _07synchronized;
  * but remaining threads are allowed to execute non-synchronized methods simultaneously.
 */
 
-class Display4 {
+class Display5 {
 
 	public synchronized void displayN() {
 		for (int i = 0; i < 5; i++) {
@@ -19,7 +19,7 @@ class Display4 {
 		}
 	}
 
-	public void displayC() { // public synchronized void displayC()
+	public synchronized void displayC() {
 		for (int i = 65; i < 70; i++) {
 			System.out.print((char) i + " ");
 			try {
@@ -31,11 +31,11 @@ class Display4 {
 	}
 }
 
-class MyThread4 extends Thread {
+class MyThread6 extends Thread {
 
-	public Display4 display;
+	public Display5 display;
 
-	public MyThread4(Display4 display) {
+	public MyThread6(Display5 display) {
 		super();
 		this.display = display;
 	}
@@ -45,11 +45,11 @@ class MyThread4 extends Thread {
 	}
 }
 
-class MyThread5 extends Thread {
+class MyThread7 extends Thread {
 
-	public Display4 display;
+	public Display5 display;
 
-	public MyThread5(Display4 display) {
+	public MyThread7(Display5 display) {
 		super();
 		this.display = display;
 	}
@@ -59,12 +59,12 @@ class MyThread5 extends Thread {
 	}
 }
 
-public class _05SynchronizedDemo {
+public class _07SynchronizedDemo {
 
 	public static void main(String[] args) {
-		Display4 display = new Display4();
-		MyThread4 t1 = new MyThread4(display);
-		MyThread5 t2 = new MyThread5(display);
+		Display5 display = new Display5();
+		MyThread6 t1 = new MyThread6(display);
+		MyThread7 t2 = new MyThread7(display);
 		t1.start();
 		t2.start();
 	}
