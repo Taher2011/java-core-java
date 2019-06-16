@@ -7,10 +7,10 @@ package _03boundedTypesInGenerics;
  * 
  * T can be either class or interface.
  * 
- * If T is class then as typeParameter we can pass
+ * If X is class then as typeParameter we can pass
  * either X type or its child classes.
  * 
- *  If T is interface then as typeParameter we can pass
+ *  If X is interface then as typeParameter we can pass
  *  either X type or its implemented classes.
  */
 
