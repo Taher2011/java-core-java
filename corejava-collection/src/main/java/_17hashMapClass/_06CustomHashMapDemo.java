@@ -61,6 +61,7 @@ public class _06CustomHashMapDemo {
 		personHashMap.put(p1, "4");
 		personHashMap.put(p2, "2");
 		personHashMap.put(p3, "3");
+		personHashMap.put(p4, "9");
 
 		System.out.println(personHashMap);
 	}

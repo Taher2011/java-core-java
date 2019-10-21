@@ -60,6 +60,7 @@ public class _02CustomIdentityHashMapDemo {
 		identityHashMap.put(p1, "4");
 		identityHashMap.put(p2, "2");
 		identityHashMap.put(p3, "3");
+		identityHashMap.put(p4, "3");
 
 		System.out.println(identityHashMap);
 	}
