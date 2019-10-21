@@ -1,6 +1,6 @@
 package _17hashMapClass;
 
-class Address { 
+class Address {
 
 	private int addressId;
 	private String city;
@@ -25,8 +25,7 @@ class Address {
 		}
 		if (object instanceof Address) {
 			Address address = (Address) object;
-			if (this.addressId == address.getAddressId()
-					&& this.city.equals(address.getCity())) {
+			if (this.addressId == address.getAddressId() && this.city.equals(address.getCity())) {
 				return true;
 			}
 		}
@@ -47,17 +46,16 @@ public class _01EqualAndHashCodeContractDemo {
 		Address address4 = address1;
 
 		if (address1.equals(address3)) {
-			System.out
-					.println("If two objects are     equals by equals(), then their hasCode() is always same");
+			System.out.println("If two objects are     equals by equals(), then their hasCode() must be same");
 		}
 		if (!(address1.equals(address2))) {
 			System.out
 					.println("If two objects are not equals by equals(), then their hasCode() may or may not be same");
 		}
-		System.out
-				.println("If two objects are having same      hashcode, then two objects may or may not be equals by equals()");
-		System.out
-				.println("If two objects are having different hashcode, then two objects is always different by equals()");
+		System.out.println(
+				"If two objects are having same      hashcode, then two objects may or may not be equals by equals()");
+		System.out.println(
+				"If two objects are having different hashcode, then two objects must be different by equals()");
 
 	}
 
