@@ -28,8 +28,7 @@ public class _05MethodOveriddingForAbstractMethodDemo {
 
 	public static void main(String[] args) {
 
-		// Parent4 p = new Parent4(); compile error as can't create object of
-		// Abstract class
+		// Parent4 p = new Parent4(); compile error as can't create object of Abstract class
 		Child4 c = new Child4();
 		Parent4 pc = new Child4();
 

@@ -19,11 +19,13 @@ class Parent3 {
 
 class Child3 extends Parent3 {
 
-	// below method will get compile time error as we cant override final
+	// below method will get compile time error as we can't override final
 	// method.
 	/*
-	 * public Parent3 marriage() { System.out.println("Child3"); return new
-	 * Child3(); }
+	 public Parent3 marriage() { 
+		  System.out.println("Child3"); 
+		  return new  Child3(); 
+	  }
 	 */
 
 	// below method will not throw compile time error as job method is private

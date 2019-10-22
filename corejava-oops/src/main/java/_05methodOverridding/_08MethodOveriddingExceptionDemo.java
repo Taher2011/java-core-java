@@ -45,7 +45,8 @@ class Child7 extends Parent7 {
 	// Compile time error
 	/*
 	 * public void marriage() throws Exception {
-	 * System.out.println("Child7 marriage"); }
+	 *  System.out.println("Child7 marriage"); 
+	 * }
 	 */
 
 	public void job() throws IOException {
@@ -55,7 +56,8 @@ class Child7 extends Parent7 {
 	// Compile time error
 	/*
 	 * public void relatives() throws Exception {
-	 * System.out.println("Parent7 relatives"); }
+	 *  System.out.println("Parent7 relatives");
+	 * }
 	 */
 
 	public void friends() throws FileNotFoundException, EOFException {
@@ -64,8 +66,9 @@ class Child7 extends Parent7 {
 
 	// Compile time error
 	/*
-	 * public void neighbours() throws FileNotFoundException,
-	 * InterruptedException { System.out.println("Parent7 neighbours"); }
+	 * public void neighbours() throws FileNotFoundException, InterruptedException { 
+	 *  System.out.println("Parent7 neighbours"); 
+	 * }
 	 */
 
 	public void relation() throws RuntimeException {
