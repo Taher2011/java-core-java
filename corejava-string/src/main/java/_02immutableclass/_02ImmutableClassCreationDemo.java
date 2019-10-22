@@ -27,7 +27,7 @@ class Person {
 	}
 
 	public Person personImmutable(Person person) {
-		person = new Person(person.getId(), person.getName());
+		person = new Person(789, "XYZ");
 		return person;
 	}
 
