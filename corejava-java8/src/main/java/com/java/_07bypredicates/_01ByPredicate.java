@@ -1,4 +1,4 @@
-package com.java._06bypredicates;
+package com.java._07bypredicates;
 
 import java.util.function.BiPredicate;
 

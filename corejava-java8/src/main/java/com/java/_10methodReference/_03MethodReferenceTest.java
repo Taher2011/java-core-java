@@ -1,4 +1,4 @@
-package com.java._09methodReference;
+package com.java._10methodReference;
 
 class Nest {
 

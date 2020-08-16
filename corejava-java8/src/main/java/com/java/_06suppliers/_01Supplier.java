@@ -1,4 +1,4 @@
-package com.java.suppliers;
+package com.java._06suppliers;
 
 import java.util.Date;
 import java.util.function.Supplier;
