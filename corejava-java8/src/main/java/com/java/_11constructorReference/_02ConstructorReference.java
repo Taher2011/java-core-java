@@ -2,10 +2,6 @@ package com.java._11constructorReference;
 
 class Department {
 
-	public Department() {
-		System.out.println("Department class constructor execution");
-	}
-
 	public Department(int departmentId) {
 		System.out.println("Department Id is " + departmentId);
 	}
