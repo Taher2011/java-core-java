@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class RemoveNullAndEmptyString {
+public class CheckNullAndEmptyString {
 
 	public static void main(String[] args) {
 
