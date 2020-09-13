@@ -3,37 +3,58 @@ package com.java._12streams;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Setter
 @Getter
-class Company {
+@AllArgsConstructor
+@ToString
+class DBCompany {
 
-	private String name;
+	private String companyName;
+	private String companyLocation;
+	private String companyCode;
 
-	public Company(String name) {
-		this.name = name;
-	}
+}
+
+@Setter
+@Getter
+@ToString
+class DomainCompany {
+
+	private String companyName;
+	private String companyLocation;
+	private String companyCode;
 
 }
 
 public class _09ForeachMethod {
 
 	public static void main(String[] args) {
-		List<Company> companies = new ArrayList<>();
-		companies.add(new Company("Accenture"));
-		companies.add(new Company("CG"));
-		companies.add(new Company("TCS"));
-		companies.add(new Company("CSC"));
-		companies.add(new Company("GL"));
 
-		for (Company company : companies) {
-			System.out.println("Company Name is " + company.getName());
-		}
+		List<DBCompany> dbCompanyList = new ArrayList<>();
+		dbCompanyList.add(new DBCompany("TCS", "Pune", "1234"));
+		dbCompanyList.add(new DBCompany("CSC", "Indore", "5678"));
+		dbCompanyList.add(new DBCompany("GL", "Nagpur", "9012"));
 
-		System.out.println();
-		
+		System.out.println(dbCompanyList);
+
+		List<DomainCompany> domainCompanyList = new ArrayList<>();
+
 		// using stream concept
-		companies.stream().forEach(company -> System.out.println("Company Name is " + company.getName()));
+		dbCompanyList.stream().forEach(db -> {
+			DomainCompany domainompany = new DomainCompany();
+			domainompany.setCompanyCode(db.getCompanyCode());
+			domainompany.setCompanyLocation(db.getCompanyLocation());
+			domainompany.setCompanyName(db.getCompanyName());
+			domainCompanyList.add(domainompany);
+		});
+
+		System.out.println(domainCompanyList);
+
 	}
 
 }
