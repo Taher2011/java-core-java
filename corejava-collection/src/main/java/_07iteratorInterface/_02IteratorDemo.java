@@ -9,8 +9,16 @@ import java.util.Iterator;
  * and we can't perform add and replace operation
  * only read and remove operation.*/
 
+/*
+ * Why Iterator doesn't have add() ?
+ * Iterator will be used to iterate through a set/list/queue. All these collections have their own logic for ordering. For e.g "TreeSet" is a sorted data structure. 
+ * Now while iterating through a treeSet of let {2,5,7,19,22}; when the cursor is at 7 ,programmer tries to add 29. in this scenario TreeSet would be dis-sorted and 
+ * corrupted.Hence add() should not be allowed.
+ * But in remove () we are only deleting an element from a particular position which can never harm the ordering. So remove() is allowed.
+ */
+
 class Employee {
-	
+
 	private String empName;
 
 	public Employee(String empName) {
@@ -20,7 +28,7 @@ class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee Name = " + empName ;
+		return "Employee Name = " + empName;
 	}
 
 }
@@ -48,22 +56,22 @@ public class _02IteratorDemo {
 			}
 		}
 		System.out.println(list);
-		
+
 		System.out.println();
-		
+
 		ArrayList<Employee> listEmp = new ArrayList<Employee>();
 		listEmp.add(new Employee("A"));
 		listEmp.add(new Employee("F"));
 		listEmp.add(new Employee("B"));
 		listEmp.add(new Employee("W"));
 		System.out.println(listEmp);
-		
+
 		Iterator<Employee> iteratorEmp = listEmp.iterator();
-		while(iteratorEmp.hasNext()) {
+		while (iteratorEmp.hasNext()) {
 			Employee employee = iteratorEmp.next();
 			System.out.println(employee);
 		}
-		
+
 	}
 
 }
