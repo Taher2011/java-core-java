@@ -41,10 +41,10 @@ public class _04HashMapIteratorDemo {
 		Iterator<Entry<City, String>> iterator = set.iterator();
 
 		while (iterator.hasNext()) {
-			Map.Entry<City, String> cityItr = (Map.Entry<City, String>) iterator.next();
+			Map.Entry<City, String> cityItr = iterator.next();
 			System.out.println("Keys are " + cityItr.getKey() + " and Values are " + cityItr.getValue());
-			
-			if(cityItr.getKey().toString().equals("2 Bombay")) {
+
+			if (cityItr.getKey().toString().equals("2 Bombay")) {
 				cityItr.setValue("M");
 			}
 		}
