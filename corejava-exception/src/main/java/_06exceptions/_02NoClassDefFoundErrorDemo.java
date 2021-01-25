@@ -1,13 +1,16 @@
 package _06exceptions;
 
-class ClassNotFoundException1 {
+/*If A existed while compiling _02NoClassDefFoundErrorDemo.java , but not found while execution
+ * i.e. A.class not not found then it throws NoClassDefFoundError.*/
+
+class A {
 
 }
 
 public class _02NoClassDefFoundErrorDemo {
 
 	public static void main(String[] args) {
-		ClassNotFoundException1 classNotFoundException1 = new ClassNotFoundException1();
+		A a = new A();
 	}
 
 }
