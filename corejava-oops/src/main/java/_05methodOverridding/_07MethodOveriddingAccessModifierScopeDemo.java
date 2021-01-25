@@ -48,13 +48,13 @@ public class _07MethodOveriddingAccessModifierScopeDemo {
 		p.job();
 
 		System.out.println();
-		
+
 		c.property();
 		c.marriage();
 		c.job();
 
 		System.out.println();
-		
+
 		pc.property();
 		pc.marriage();
 		pc.job();
