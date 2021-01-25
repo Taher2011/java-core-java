@@ -42,34 +42,31 @@ class Child7 extends Parent7 {
 		System.out.println("GoldCashLand");
 	}
 
-	// Compile time error
-	/*
-	 * public void marriage() throws Exception {
-	 *  System.out.println("Child7 marriage"); 
-	 * }
-	 */
+//	 Compile time error
+
+//	  public void marriage() throws Exception {
+//	   System.out.println("Child7 marriage"); 
+//	  }
 
 	public void job() throws IOException {
 		System.out.println("Child7 job");
 	}
 
-	// Compile time error
-	/*
-	 * public void relatives() throws Exception {
-	 *  System.out.println("Parent7 relatives");
-	 * }
-	 */
+//	Compile time error
+
+//	public void relatives() throws Exception {
+//		System.out.println("Parent7 relatives");
+//	}
 
 	public void friends() throws FileNotFoundException, EOFException {
 		System.out.println("Child7 friends");
 	}
 
-	// Compile time error
-	/*
-	 * public void neighbours() throws FileNotFoundException, InterruptedException { 
-	 *  System.out.println("Parent7 neighbours"); 
-	 * }
-	 */
+//  Compile time error
+
+//	public void neighbours() throws FileNotFoundException, InterruptedException {
+//		System.out.println("Parent7 neighbours");
+//	}
 
 	public void relation() throws RuntimeException {
 		System.out.println("Child7 relation");
@@ -115,16 +112,16 @@ public class _08MethodOveriddingExceptionDemo {
 			e.printStackTrace();
 		}
 		c.relation();
-		
+
 		System.out.println();
-		
+
 		try {
 			pc.property();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		pc.marriage();
-		
+
 		try {
 			pc.job();
 			pc.relatives();
