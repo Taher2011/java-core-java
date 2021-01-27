@@ -1,14 +1,15 @@
 package _01enum;
 
 enum Week {
-	Monday, Tuesday, Sunday;    // public static final Week Monday = new Week(),
-								// public static final Week Tuesday = new Week(),
-								// public static final Week Sunday = new Week();
+	MONDAY, TUESDAY, SUNDAY; // public static final Week MONDAY = new Week(),
+								// public static final Week TUESDAY = new Week(),
+								// public static final Week SUNDAY = new Week();
 
 	public static void main(String[] args) {
 		System.out.println("Main method in enum");
-		System.out.println(Monday.hashCode());
-
+		System.out.println(MONDAY.hashCode());
+		System.out.println(TUESDAY.hashCode());
+		System.out.println(SUNDAY.hashCode());
 	}
 }
 
