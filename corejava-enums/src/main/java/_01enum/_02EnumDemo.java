@@ -1,7 +1,7 @@
 package _01enum;
 
 enum Company {
-	CSC, TCS, ACCENTURE;    // public static final Company CSC = new Company(),
+	CSC, TCS, ACCENTURE; // public static final Company CSC = new Company(),
 							// public static final Company TCS = new Company(),
 							// public static final Company ACCENTURE = new Company();
 }
@@ -9,8 +9,8 @@ enum Company {
 public class _02EnumDemo {
 
 	static enum City {
-		INDORE, PUNE;    // public static final City INDORE = new City(),
-	    				 // public static final City PUNE = new City();
+		INDORE, PUNE; // public static final City INDORE = new City(),
+						// public static final City PUNE = new City();
 	}
 
 	public static void main(String[] args) {
@@ -21,9 +21,10 @@ public class _02EnumDemo {
 		City city1 = City.INDORE;
 		System.out.println(city1);
 
-		/*
-		 * enum Country { //Cant declare enum inside method INDIA, PAK; }
-		 */
+//		  enum Country { 
+//			  //Cant declare enum inside method   }
+//		  }
+
 	}
 
 }
