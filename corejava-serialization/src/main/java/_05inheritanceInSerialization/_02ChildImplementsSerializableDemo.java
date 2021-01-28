@@ -14,7 +14,7 @@ import java.io.Serializable;
  * save default value. At the time of DeSerialization jvm will check is any
  * parent class is non-serialized or not if any parent class is non-serialized
  * then jvm will execute instance control flow in every non-serialized parent
- * and share its instance var to the current object. If non-serialized parent
+ * and share its instance variable to the current object. If non-serialized parent
  * class doesn't contain default constructor then we will get runtime exception
  * InvalidClassException.
  */
