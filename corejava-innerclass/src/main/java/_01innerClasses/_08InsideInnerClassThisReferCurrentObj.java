@@ -13,6 +13,7 @@ public class _08InsideInnerClassThisReferCurrentObj {
 			System.out.println(x);
 			System.out.println(this.x);
 			System.out.println(_08InsideInnerClassThisReferCurrentObj.this.x);
+			System.out.println(new _08InsideInnerClassThisReferCurrentObj().x);
 			System.out.println(_08InsideInnerClassThisReferCurrentObj.y);
 		}
 	}
