@@ -17,7 +17,7 @@ class Outer {
 	}
 }
 
-public class _01StaticNestedClassObjectFromOutsideClassDemo {
+public class _02StaticNestedClassObjectFromOutsideClassDemo {
 
 	public static void main(String[] args) {
 		Outer.Inner i = new Outer.Inner();
