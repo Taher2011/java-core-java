@@ -9,6 +9,12 @@ class Outer {
 			System.out.println("Nested Static class method");
 		}
 	}
+
+	public static void m2() {
+		System.out.println("Outer class m2 method");
+		Inner inner = new Inner();
+		inner.m1();
+	}
 }
 
 public class _01StaticNestedClassObjectFromOutsideClassDemo {
