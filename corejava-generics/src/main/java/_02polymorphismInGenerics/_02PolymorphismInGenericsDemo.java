@@ -6,11 +6,11 @@ import java.util.List;
 public class _02PolymorphismInGenericsDemo {
 
 	public void genericList(List<List> list) {
-		System.out.println("List<List> list arument method called");
+		System.out.println("List<List> list argument method called");
 	}
 
 	public void genericList(ArrayList<ArrayList> arrayList) {
-		System.out.println("ArrayList<List> arrayList arument method called");
+		System.out.println("ArrayList<List> arrayList argument method called");
 	}
 
 	public static void main(String[] args) {
