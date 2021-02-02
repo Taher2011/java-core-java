@@ -14,6 +14,10 @@ class Cities extends Country {
 
 }
 
+class Villages extends Cities {
+
+}
+
 public class _05ArraylistOfXTypeOrItsSuperClassesDemo {
 
 	/*
@@ -37,5 +41,8 @@ public class _05ArraylistOfXTypeOrItsSuperClassesDemo {
 
 		ArrayList<Continent> aContinent = new ArrayList<Continent>();
 		m1(aContinent);
+		
+		ArrayList<Villages> aVillage = new ArrayList<Villages>();
+		//m1(aVillage); compile error as we cannot add child of Cities
 	}
 }
