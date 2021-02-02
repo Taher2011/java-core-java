@@ -6,13 +6,13 @@ import java.util.List;
 public class _02PolymorphismInGenericsDemo {
 
 	public void genericList(List<List> list) {
-		System.out.println("List<String> list called");
+		System.out.println("List<List> list arument method called");
 	}
 
 	public void genericList(ArrayList<ArrayList> arrayList) {
-		System.out.println("ArrayList<List> arrayList called");
+		System.out.println("ArrayList<List> arrayList arument method called");
 	}
-	
+
 	public static void main(String[] args) {
 
 		_02PolymorphismInGenericsDemo obj = new _02PolymorphismInGenericsDemo();
@@ -27,7 +27,7 @@ public class _02PolymorphismInGenericsDemo {
 		obj.genericList(list3);
 
 		ArrayList<ArrayList> list4 = new ArrayList<ArrayList>();
-		obj.genericList(list4); 
+		obj.genericList(list4);
 	}
 
 }
