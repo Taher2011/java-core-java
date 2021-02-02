@@ -5,7 +5,7 @@ package _03boundedTypesInGenerics;
  * We can bound the "type parameter"
  * for particular range by using extends keyword.
  * 
- * T can be either class or interface.
+ * X can be either class or interface.
  * 
  * If X is class then as typeParameter we can pass
  * either X type or its child classes.
@@ -20,9 +20,9 @@ public class _01BoundTypesSyntaxDemo {
 		
 		/*syntax of bound type*/
 		
-		/*class Test<T extends X> {
-		 * 
-		 * }*/
+//		class Test<T extends X> {
+//		  
+//		}
 	}
 
 }
