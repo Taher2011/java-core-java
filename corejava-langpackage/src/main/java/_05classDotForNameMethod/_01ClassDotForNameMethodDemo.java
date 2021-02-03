@@ -1,9 +1,9 @@
 package _05classDotForNameMethod;
 
-abstract class AbstarctLoad {
+abstract class AbstractLoad {
 
 	static {
-		System.out.println("AbstarctLoad Loaded");
+		System.out.println("static block of AbstractLoad class loaded");
 	}
 
 }
@@ -11,7 +11,7 @@ abstract class AbstarctLoad {
 class Load {
 
 	static {
-		System.out.println("Class Loaded");
+		System.out.println("static block of Load class loaded");
 	}
 
 }
@@ -27,10 +27,10 @@ public class _01ClassDotForNameMethodDemo {
 	public static void main(String[] args) throws Exception {
 
 		@SuppressWarnings("unchecked")
-		Class<Load> class1 = (Class<Load>) Class.forName("_05clasForNameMethod.Load");
+		Class<Load> class1 = (Class<Load>) Class.forName("_05classDotForNameMethod.Load");
 
 		@SuppressWarnings("unchecked")
-		Class<AbstarctLoad> class2 = (Class<AbstarctLoad>) Class.forName("_05clasForNameMethod.AbstarctLoad");
+		Class<AbstractLoad> class2 = (Class<AbstractLoad>) Class.forName("_05classDotForNameMethod.AbstractLoad");
 
 	}
 

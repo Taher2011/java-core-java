@@ -1,9 +1,9 @@
 package _05classDotForNameMethod;
 
-abstract class AbstarctNewInstance {
+abstract class AbstractNewInstance {
 
 	static {
-		System.out.println("AbstarctLoad Loaded");
+		System.out.println("static block of AbstractNewInstance class loaded");
 	}
 
 }
@@ -11,11 +11,11 @@ abstract class AbstarctNewInstance {
 class LoadNewInstance {
 
 	static {
-		System.out.println("Class Loaded");
+		System.out.println("static block of LoadNewInstance class loaded");
 	}
 
 	{
-		System.out.println("Instance mehtod");
+		System.out.println("instance block of LoadNewInstance class loaded");
 	}
 
 	public void load() {
@@ -39,13 +39,15 @@ public class _02NewInstanceMethodDemo {
 	public static void main(String[] args) throws Exception {
 
 		@SuppressWarnings("unchecked")
-		Class<LoadNewInstance> class1 = (Class<LoadNewInstance>) Class.forName("_05clasForNameMethod.LoadNewInstance");
+		Class<LoadNewInstance> class1 = (Class<LoadNewInstance>) Class
+				.forName("_05classDotForNameMethod.LoadNewInstance");
 
 		class1.newInstance().load(); // throws IllegalAccessException if constructor is private of class.
-							  		 // throws InstantiationException if class is abstarct or interface.
+										// throws InstantiationException if class is abstarct or interface.
 		System.out.println();
 
-		Class<AbstarctNewInstance> class2 = (Class<AbstarctNewInstance>) Class.forName("_05clasForNameMethod.AbstarctNewInstance");
+		Class<AbstractNewInstance> class2 = (Class<AbstractNewInstance>) Class
+				.forName("_05classDotForNameMethod.AbstractNewInstance");
 		class2.newInstance();
 
 	}
