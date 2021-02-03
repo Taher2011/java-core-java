@@ -7,8 +7,7 @@ class College implements Cloneable {
 	private String collegeType;
 	private Branch branch;
 
-	public College(int collegeRegisteredNo, String collegeBranch,
-			String collegeType, Branch branch) {
+	public College(int collegeRegisteredNo, String collegeBranch, String collegeType, Branch branch) {
 		super();
 		this.collegeRegisteredNo = collegeRegisteredNo;
 		this.collegeBranch = collegeBranch;
@@ -32,16 +31,15 @@ class College implements Cloneable {
 		return branch;
 	}
 
-	/*The process of creating exactly duplicate object is called Cloning*/
+	/* The process of creating exactly duplicate object is called Cloning */
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
 
 	@Override
 	public String toString() {
-		return "CollegeRegisteredNo : " + collegeRegisteredNo
-				+ ", CollegeBranch : " + collegeBranch + ", CollegeType : "
-				+ collegeType + " " + branch;
+		return "CollegeRegisteredNo : " + collegeRegisteredNo + ", CollegeBranch : " + collegeBranch
+				+ ", CollegeType : " + collegeType + " " + branch;
 	}
 }
 
@@ -80,13 +78,13 @@ public class _06CloneMethodShallowDemo {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		Branch branch = new Branch(123, "CS");
-		College collegeOriginal = new College(321, "ABRoad", "Engineering",branch);
+		College collegeOriginal = new College(321, "ABRoad", "Engineering", branch);
 		System.out.println("Original Object--> " + collegeOriginal);
-		
+
 		College collegeClone = (College) collegeOriginal.clone();
 		System.out.println("Cloned   Object--> " + collegeClone);
 		System.out.println();
-		
+
 		collegeClone.setCollegeBranch("MGRoad");
 		collegeClone.getBranch().setBranchId(456);
 		collegeClone.getBranch().setBranchName("EC");
