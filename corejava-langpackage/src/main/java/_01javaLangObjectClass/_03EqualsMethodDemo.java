@@ -17,7 +17,7 @@ class Employee {
 		if (this == object) {
 			return true;
 		}
-		if ((object == null) && (object instanceof Employee)) {
+		if ((object != null) && (object instanceof Employee)) {
 			Employee employee = (Employee) object;
 			if (this.empId == employee.empId) {
 				return true;
