@@ -62,7 +62,7 @@ public class _06CusotmImmutableClassCreationCase3Demo {
 		
 		System.out.println();
 		
-		/*However, our class is now fully immutable, let�s take the following test scenario:*/
+		/*However, our class is now fully immutable, let's take the following test scenario:*/
 		System.out.println("Taher age year before modification = " + student.getAge().getYear());
 	    student.getAge().setYear(1993);
 	    System.out.println("Taher age year after modification = " + student.getAge().getYear());

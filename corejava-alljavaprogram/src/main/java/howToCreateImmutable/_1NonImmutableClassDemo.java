@@ -15,9 +15,11 @@ class Employee {
 		return employee;
 	}
 
-	public void employeeUpdateNewObject(Employee employee) {
-		employee = new Employee(012, "Vivek");
-		employee.empId = 456;
+	public Employee employeeUpdateNewObject(Employee employee) {
+		employee = new Employee(employee.empId, employee.empName);
+		employee.empId = 777;
+		employee.empName = "Rakesh";
+		return employee;
 	}
 
 	@Override
@@ -32,19 +34,22 @@ public class _1NonImmutableClassDemo {
 	public static void main(String[] args) {
 		Employee employee1 = new Employee(123, "Taher");
 		Employee employee2 = new Employee(789, "Nitin");
-		
-		System.out.println(employee1);
-		System.out.println();
-		
-		employee1.employeeUpdateExistingObject(employee2);
-		System.out.println(employee1);
 
-		System.out.println();
+		System.out.println(employee1);
 		System.out.println(employee2);
 		System.out.println();
-		
-		employee2.employeeUpdateNewObject(employee2);
+
+		Employee employee3 = employee1.employeeUpdateExistingObject(employee2);
+		System.out.println(employee1);
 		System.out.println(employee2);
+		System.out.println(employee3);
+		System.out.println();
+
+		Employee employee4 = employee2.employeeUpdateNewObject(employee3);
+		System.out.println(employee1);
+		System.out.println(employee2);
+		System.out.println(employee3);
+		System.out.println(employee4);
 	}
 
 }
