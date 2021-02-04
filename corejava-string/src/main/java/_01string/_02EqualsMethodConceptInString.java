@@ -12,13 +12,16 @@ package _01string;
 public class _02EqualsMethodConceptInString {
 
 	public static void main(String[] args) {
+		
 		String s1 = new String("Ali");
 		String s2 = new String("Ali");
+		
 		System.out.println(s1 == s2);
 		System.out.println(s1.equals(s2));
 
 		StringBuffer sb1 = new StringBuffer("Ali");
 		StringBuffer sb2 = new StringBuffer("Ali");
+		
 		System.out.println(sb1 == sb2);
 		System.out.println(sb1.equals(sb2));
 	}
