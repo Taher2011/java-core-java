@@ -29,28 +29,24 @@ class Display6 {
 class MyThread10 extends Thread {
 
 	public Display6 display;
-	public String name;
 
 	public MyThread10(Display6 display) {
 		super();
 		this.display = display;
-		this.name = name;
 	}
 
 	public void run() {
-		display.displayC();
+		Display6.displayC();
 	}
 }
 
 class MyThread11 extends Thread {
 
 	public Display6 display;
-	public String name;
 
 	public MyThread11(Display6 display) {
 		super();
 		this.display = display;
-		this.name = name;
 	}
 
 	public void run() {
@@ -62,8 +58,8 @@ public class _05StaticSynchronizedDemo {
 
 	/*
 	 * If Multiple threads(t1,t2) are operating on multiple
-	 * objects(display1,display2) for static synchronization method, in this
-	 * case we will get regular output, because thread acquired class level lock
+	 * objects(display1,display2) for static synchronization method, in this case we
+	 * will get regular output, because thread acquired class level lock
 	 */
 	public static void main(String[] args) {
 		Display6 display1 = new Display6();
