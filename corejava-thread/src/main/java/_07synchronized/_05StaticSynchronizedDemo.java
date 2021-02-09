@@ -3,6 +3,7 @@ package _07synchronized;
 class Display6 {
 
 	public static synchronized void displayC() {
+		System.out.print(Display3.class.hashCode() + " ");
 		for (int i = 65; i < 70; i++) {
 			System.out.print((char) i + " ");
 			try {
@@ -14,6 +15,7 @@ class Display6 {
 	}
 
 	public synchronized void displayN() {
+		System.out.print(Display3.class.hashCode() + " ");
 		for (int i = 0; i < 5; i++) {
 			System.out.print(i + " ");
 			try {

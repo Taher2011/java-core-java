@@ -3,6 +3,7 @@ package _07synchronized;
 class Display1 {
 
 	public synchronized void wish(String name) {
+		System.out.println(this.hashCode());
 		for (int i = 0; i < 5; i++) {
 			System.out.print("GM ");
 			try {
