@@ -9,7 +9,10 @@ class Display {
 		;
 		;
 		;// /10k lines of code
-		synchronized (this) {
+		synchronized (this) { // object level lock and other threads with same object cannot enter into
+								// synchronized block
+			System.out.println(this.hashCode());
+			System.out.println(Thread.currentThread().getName() + " entered into synchornized block");
 			for (int i = 0; i < 5; i++) {
 				System.out.print("GM ");
 				try {
