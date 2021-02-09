@@ -1,4 +1,6 @@
-Synchronization : When multiple threads are operating simultaneously on same java object, then there may be chance of data inconsistency. To overcome such problem synchronization is used.
+Synchronization : Synchronization is the process of executing multiple thread in multi-thread environment in sequential manner.
+				  Synchronization is used to prevent thread interference and data inconsistency
+				  When multiple threads are operating simultaneously on same java object, then there may be chance of data inconsistency. To overcome such problem synchronization is used.
 				  If method or blocked is declared as synchronized then at a time only one thread is allowed to access that method or block on given object to avoid data inconsistency.
 				  Then main advantage of synchronization is data inconsistency problem may resolved, but the main disadvantage is it increases waiting time of threads and creates performance
 				  issues. Internally synchronization concept is implemented by using lock. 
