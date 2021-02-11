@@ -3,7 +3,7 @@ package _01concurrentCollections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/* Traditional collection like ArrayList,HashSet can be accessed
+/* Traditional collection objects like ArrayList,HashSet can be accessed
  * by multiple threads simultaneously and there may be chance of
  * data inconsistency.
  * 
