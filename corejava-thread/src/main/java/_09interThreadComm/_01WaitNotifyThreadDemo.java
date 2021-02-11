@@ -6,6 +6,7 @@ class ThreadA extends Thread {
 
 	public void run() {
 		synchronized (this) {
+			System.out.println(Thread.currentThread().getName() + " " + this.hashCode());
 			System.out.println("Child thread started calculation");
 			for (int i = 0; i <= 5; i++) {
 				total = total + i;
@@ -24,6 +25,7 @@ public class _01WaitNotifyThreadDemo {
 		ThreadA t = new ThreadA();
 		t.start();
 		synchronized (t) {
+			System.out.println(Thread.currentThread().getName() + " " + t.hashCode());
 			System.out.println("Main thread calling wait method");
 			t.wait();
 			System.out.println("Main thread got notification call");
