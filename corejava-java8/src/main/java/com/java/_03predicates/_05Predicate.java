@@ -31,7 +31,7 @@ public class _05Predicate {
 		students.add(new Student("Peter", 3200));
 
 		Predicate<Student> p = s -> s.getSalary() > 3000;
-
+		System.out.println("Student whose salary is greater than 3000 : ");
 		for (Student student : students) {
 			if (p.test(student)) {
 				System.out.println("Name is " + student.getName() + " and salary is " + student.getSalary());
