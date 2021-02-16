@@ -13,8 +13,14 @@ interface Emp {
 public class _01ConstructorReference {
 
 	public static void main(String[] args) {
-		Emp employee = Employee::new;
-		employee.get();
+
+		Emp lambdaEmp = () -> {
+			return new Employee();
+		};
+		lambdaEmp.get();
+
+		Emp constRefEmp = Employee::new;
+		constRefEmp.get();
 	}
 
 }
