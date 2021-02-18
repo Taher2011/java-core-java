@@ -18,18 +18,29 @@ public class _15WithMap {
 		cityList.add("Chennai");
 		cityList.add("Hyderabad");
 		System.out.println("list " + cityList);
-		
+
 		for (String city : cityList) {
 			System.out.println(city + " length is " + length(city));
 		}
+
+		System.out.println();
 
 		List<Integer> lengthOfCities = cityList.stream().map(c -> c.length()).collect(Collectors.toList());
 
 		int i = 0;
 		for (String city : cityList) {
-			System.out.println(
-					city + " length is " + lengthOfCities.get(i));
+			System.out.println(city + " length is " + lengthOfCities.get(i));
 			i++;
+		}
+
+		System.out.println();
+
+		List<Integer> lengthOfCitiesUsingMethodRef = cityList.stream().map(String::length).collect(Collectors.toList());
+
+		int j = 0;
+		for (String city : cityList) {
+			System.out.println(city + " length is " + lengthOfCitiesUsingMethodRef.get(j));
+			j++;
 		}
 
 	}
