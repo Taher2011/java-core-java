@@ -50,7 +50,7 @@ public class _09ForeachMethod {
 		List<DatabaseCompany> databaseCompanies = new ArrayList<>();
 		databaseCompanies.add(new DatabaseCompany("TCS", "Pune", "1234"));
 		databaseCompanies.add(new DatabaseCompany("CSC", "Indore", "5678"));
-		databaseCompanies.add(new DatabaseCompany("GL", "Nagpur", "9012"));
+		databaseCompanies.add(new DatabaseCompany("LnT", "Nagpur", "9012"));
 
 		System.out.println("Database " + databaseCompanies);
 
