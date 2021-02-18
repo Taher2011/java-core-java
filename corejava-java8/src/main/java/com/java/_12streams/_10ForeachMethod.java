@@ -20,6 +20,11 @@ public class _10ForeachMethod {
 
 		// using stream concept
 		list.stream().forEach(System.out::println);
+
+		// using stream concept
+		list.stream().forEach(i -> {
+			System.out.println(i);
+		});
 	}
 
 }
