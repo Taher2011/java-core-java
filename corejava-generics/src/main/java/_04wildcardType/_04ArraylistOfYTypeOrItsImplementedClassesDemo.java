@@ -29,13 +29,13 @@ public class _04ArraylistOfYTypeOrItsImplementedClassesDemo {
 
 	public static void main(String[] args) {
 
-		ArrayList<College> colleges = new ArrayList<College>();
+		ArrayList<College> colleges = new ArrayList<>();
 		m1(colleges);
 
-		ArrayList<EngineeringCollege> engineeringColleges = new ArrayList<EngineeringCollege>();
+		ArrayList<EngineeringCollege> engineeringColleges = new ArrayList<>();
 		m1(engineeringColleges);
 
-		ArrayList<MedicalCollege> medicalColleges = new ArrayList<MedicalCollege>();
+		ArrayList<MedicalCollege> medicalColleges = new ArrayList<>();
 		m1(medicalColleges);
 	}
 }

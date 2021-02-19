@@ -21,9 +21,9 @@ class Villages extends Cities {
 public class _05ArraylistOfXTypeOrItsSuperClassesDemo {
 
 	/*
-	 * We can call this method by passing ArrayList of either X type or its
-	 * super classes objects. Within this method we can not add objects because
-	 * we don't know the type exactly except null.
+	 * We can call this method by passing ArrayList of either X type or its super
+	 * classes objects. Within this method we can not add objects because we don't
+	 * know the type exactly except null.
 	 */
 	public static void m1(ArrayList<? super Cities> al) {
 		System.out.println("ArrayList<? super City> al");
@@ -33,16 +33,16 @@ public class _05ArraylistOfXTypeOrItsSuperClassesDemo {
 
 	public static void main(String[] args) {
 
-		ArrayList<Cities> aCity = new ArrayList<Cities>();
+		ArrayList<Cities> aCity = new ArrayList<>();
 		m1(aCity);
 
-		ArrayList<Country> aCountry = new ArrayList<Country>();
+		ArrayList<Country> aCountry = new ArrayList<>();
 		m1(aCountry);
 
-		ArrayList<Continent> aContinent = new ArrayList<Continent>();
+		ArrayList<Continent> aContinent = new ArrayList<>();
 		m1(aContinent);
-		
-		ArrayList<Villages> aVillage = new ArrayList<Villages>();
-		//m1(aVillage); compile error as we cannot add child of Cities
+
+		ArrayList<Villages> aVillage = new ArrayList<>();
+		// m1(aVillage); compile error as we cannot add child of Cities
 	}
 }

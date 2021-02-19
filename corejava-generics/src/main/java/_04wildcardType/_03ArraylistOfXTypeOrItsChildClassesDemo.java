@@ -17,9 +17,9 @@ class AutoCompany extends Company {
 public class _03ArraylistOfXTypeOrItsChildClassesDemo {
 
 	/*
-	 * We can call this method by passing ArrayList of either X type or its
-	 * child classes objects. Within this method we can not add objects because
-	 * we don't know the type exactly except null.
+	 * We can call this method by passing ArrayList of either X type or its child
+	 * classes objects. Within this method we can not add objects because we don't
+	 * know the type exactly except null.
 	 */
 	public static void m1(ArrayList<? extends Company> al) {
 		System.out.println("ArrayList<? extends Company> al");
@@ -29,13 +29,13 @@ public class _03ArraylistOfXTypeOrItsChildClassesDemo {
 
 	public static void main(String[] args) {
 
-		ArrayList<Company> companies = new ArrayList<Company>();
+		ArrayList<Company> companies = new ArrayList<>();
 		m1(companies);
 
-		ArrayList<ITCompany> itCompanies = new ArrayList<ITCompany>();
+		ArrayList<ITCompany> itCompanies = new ArrayList<>();
 		m1(itCompanies);
 
-		ArrayList<AutoCompany> autoCompanies = new ArrayList<AutoCompany>();
+		ArrayList<AutoCompany> autoCompanies = new ArrayList<>();
 		m1(autoCompanies);
 	}
 }
