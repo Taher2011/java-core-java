@@ -17,16 +17,18 @@ public class _02PolymorphismInGenericsDemo {
 
 		_02PolymorphismInGenericsDemo obj = new _02PolymorphismInGenericsDemo();
 
-		List<ArrayList> list1 = new ArrayList<ArrayList>();
-		// obj.genericList(list1); // method genericList(List<List>) in the type _02PolymorphismInGenericsDemo is not applicable for the arguments (List<ArrayList>)
-		
-		List<List> list2 = new ArrayList<List>();
+		List<ArrayList> list1 = new ArrayList<>();
+		// obj.genericList(list1); // method genericList(List<List>) in the type
+		// _02PolymorphismInGenericsDemo is not applicable for the arguments
+		// (List<ArrayList>)
+
+		List<List> list2 = new ArrayList<>();
 		obj.genericList(list2);
 
-		ArrayList<List> list3 = new ArrayList<List>();
+		ArrayList<List> list3 = new ArrayList<>();
 		obj.genericList(list3);
 
-		ArrayList<ArrayList> list4 = new ArrayList<ArrayList>();
+		ArrayList<ArrayList> list4 = new ArrayList<>();
 		obj.genericList(list4);
 	}
 
