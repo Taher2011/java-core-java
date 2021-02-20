@@ -42,11 +42,12 @@ public class _01MutableClassCreationDemo {
 	public static void main(String[] args) {
 		Employee e1 = new Employee(123, "ABC");
 		Employee e2 = new Employee(456, "DEF");
-		
+
 		System.out.println(e1);
 		System.out.println(e2);
-		
+
 		e1.employeeMutable(e2);
+		System.out.println();
 
 		System.out.println(e1);
 		System.out.println(e2);

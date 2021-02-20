@@ -9,6 +9,8 @@ package _02immutableclass;
 		Inside the constructor, make sure to use a clone copy of the passed argument and never set your mutable field to the real instance passed through constructor, 
 		this is to prevent the clients who pass the object from modifying it afterwards.
         Make sure to always return a clone copy of the field and never return the real object instance.
+        : Inside the constructor, return clone copy of the mutable field.
+        : Form the getter method of mutable field return clone copy.
 */
 
 final class ImmutableStudent2 {
