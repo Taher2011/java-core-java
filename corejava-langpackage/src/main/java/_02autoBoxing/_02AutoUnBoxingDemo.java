@@ -7,7 +7,7 @@ public class _02AutoUnBoxingDemo {
 		
 		int i = intg; // conversion of wrapper object to primitive is called auto-unboxing
 		
-		//int i = Integer.intValueOf(); // Above line no 8 at compile time is replaced internally by compiler similarly to line no 10
+		//int i = Integer.intValue(); // Above line no 8 at compile time is replaced internally by compiler similarly to line no 10
 	}
 
 }
