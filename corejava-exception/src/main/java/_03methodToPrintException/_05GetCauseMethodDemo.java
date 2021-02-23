@@ -32,8 +32,10 @@ public class _05GetCauseMethodDemo {
 		} catch (Exception e) {
 			System.out.println(e.getCause());
 		}
+		
 		System.out.println("=============================");
 		System.out.println("=============================");
+		
 		service.convertDollarsToEuros("asd");
 
 	}
