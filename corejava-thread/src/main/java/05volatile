@@ -12,3 +12,5 @@ Static Variable: If two Threads(suppose t1 and t2) are accessing the same object
 Volatile variable: If two Threads(suppose t1 and t2) are accessing the same object and updating a variable which is declared as volatile then it means t1 and t2 can make their own local cache of 
                    the Object except the variable which is declared as a volatile . So the volatile variable will have only one main copy which will be updated by different threads and update made
                    by one thread to the volatile variable will immediately reflect to the other Thread.
+                   
+Static means one copy of the value for all objects and Volatile means one copy of the value for all threads
