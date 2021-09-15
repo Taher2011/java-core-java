@@ -1,6 +1,6 @@
 package com.java._01defaultMethods;
 
-interface A {
+interface A { 
 
 	String getName(String name);
 
