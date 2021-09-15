@@ -1,7 +1,7 @@
 package com.java._01defaultMethods;
 
 interface A { 
-
+ 
 	String getName(String name);
 
 	default String getCompany() {
