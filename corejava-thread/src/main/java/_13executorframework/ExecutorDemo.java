@@ -8,6 +8,9 @@ import java.util.concurrent.ExecutionException;
    which are ready to perform jobs. ThreadPool also known as Executor Framework.
    In below program 3 threads are responsible to execute 4 jobs so that a single
    thread can be used for multiple jobs.
+   
+   In summary, thread pool is a fundamental component used by the Executor Framework to manage the execution of tasks asynchronously 
+   by reusing a fixed number of threads. 
 */
 
 import java.util.concurrent.ExecutorService;
