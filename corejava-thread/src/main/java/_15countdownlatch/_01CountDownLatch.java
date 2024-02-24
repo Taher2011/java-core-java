@@ -2,6 +2,10 @@ package _15countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
+/* The CountDownLatch named latch ensures that the main thread waits until all worker threads complete their tasks. 
+   Each worker thread decrements the latch count when it finishes its task. 
+   Once all tasks are completed and the latch count reaches zero, the main thread proceeds with its execution.*/
+
 class ProcessThread implements Runnable {
 
 	CountDownLatch latch;
@@ -31,7 +35,7 @@ class ProcessThread implements Runnable {
 
 }
 
-public class CountDownLatchTest {
+public class _01CountDownLatch {
 
 	public static void main(String[] args) {// Parent thread creating a latch object
 		CountDownLatch latch = new CountDownLatch(3);
