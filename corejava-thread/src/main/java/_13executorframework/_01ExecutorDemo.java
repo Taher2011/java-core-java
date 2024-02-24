@@ -45,7 +45,7 @@ class Job implements Runnable {
 
 }
 
-public class ExecutorDemo {
+public class _01ExecutorDemo {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 
@@ -53,7 +53,7 @@ public class ExecutorDemo {
 
 		ExecutorService executorService = Executors.newFixedThreadPool(3);
 		for (Job job : jobs) {
-			executorService.submit(job);
+			executorService.execute(job);
 		}
 		executorService.shutdown();
 	}
