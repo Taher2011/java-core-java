@@ -49,21 +49,21 @@ public class StreamQuestions {
 				new Student(5, "Ava", "Davis", 19, "Female", "Computer Science", 2023, "Boston", 53),
 				new Student(6, "Tom", "Mathew", 21, "Male", "Mechanical Engineering", 2019, "Washington", 68));
 
-		// firstNameStartsWithA(students);
-		// groupStudentsByDepartmentNames(students);
-		// findTotalCountofStudents(students);
-		// findMaxAgeofStudents(students);
-		// findAllDepartmentsNames(students);
-		// findCountofStudentsinEachDepartment(students);
-		// findStudentsAgeLessThan22(students);
-		// findStudentsRankBetween60and100(students);
-		// findAverageAgeofMaleandFemale(students);
-		// findDepartmentwithMaxNumberofStudents(students);
-		// findAverageRankinAllDepartments(students);
-		// findHighestRankinEachDepartment(students);
-		// findStudentsandSortbyRank(students);
-		// findStudentWhoHasSecondRank(students);
-	//	findStudentsStayinginNewYorkandSortbyName(students);
+		firstNameStartsWithA(students);
+		groupStudentsByDepartmentNames(students);
+		findTotalCountofStudents(students);
+		findMaxAgeofStudents(students);
+		findAllDepartmentsNames(students);
+		findCountofStudentsinEachDepartment(students);
+		findStudentsAgeLessThan22(students);
+		findStudentsRankBetween60and100(students);
+		findAverageAgeofMaleandFemale(students);
+		findDepartmentwithMaxNumberofStudents(students);
+		findAverageRankinAllDepartments(students);
+		findHighestRankinEachDepartment(students);
+		findStudentsandSortbyRank(students);
+		findStudentWhoHasSecondRank(students);
+		findStudentsStayinginNewYorkandSortbyName(students);
 	}
 
 	private static void firstNameStartsWithA(List<Student> students) {
