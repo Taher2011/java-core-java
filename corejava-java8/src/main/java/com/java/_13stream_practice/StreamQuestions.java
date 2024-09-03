@@ -50,39 +50,68 @@ public class StreamQuestions {
 				new Student(6, "Tom", "Mathew", 21, "Male", "Mechanical Engineering", 2019, "Washington", 68));
 
 		firstNameStartsWithA(students);
+		System.out.println(
+				"==============================================================================================");
 		groupStudentsByDepartmentNames(students);
+		System.out.println(
+				"==============================================================================================");
 		findTotalCountofStudents(students);
+		System.out.println(
+				"==============================================================================================");
 		findMaxAgeofStudents(students);
+		System.out.println(
+				"==============================================================================================");
 		findAllDepartmentsNames(students);
+		System.out.println(
+				"==============================================================================================");
 		findCountofStudentsinEachDepartment(students);
+		System.out.println(
+				"==============================================================================================");
 		findStudentsAgeLessThan22(students);
+		System.out.println(
+				"==============================================================================================");
 		findStudentsRankBetween60and100(students);
+		System.out.println(
+				"==============================================================================================");
 		findAverageAgeofMaleandFemale(students);
+		System.out.println(
+				"==============================================================================================");
 		findDepartmentwithMaxNumberofStudents(students);
+		System.out.println(
+				"==============================================================================================");
 		findAverageRankinAllDepartments(students);
+		System.out.println(
+				"==============================================================================================");
 		findHighestRankinEachDepartment(students);
+		System.out.println(
+				"==============================================================================================");
 		findStudentsandSortbyRank(students);
+		System.out.println(
+				"==============================================================================================");
 		findStudentWhoHasSecondRank(students);
+		System.out.println(
+				"==============================================================================================");
 		findStudentsStayinginNewYorkandSortbyName(students);
 	}
 
 	private static void firstNameStartsWithA(List<Student> students) {
-		students.stream().filter(student -> student.getFirstName().startsWith("A")).forEach(System.out::println);
+		students.stream().filter(student -> student.getFirstName().startsWith("A")).collect(Collectors.toList())
+				.forEach(System.out::println);
 	}
 
 	private static void groupStudentsByDepartmentNames(List<Student> students) {
-		Map<String, List<Student>> studentsByDepartmentNames = students.stream()
-				.collect(Collectors.groupingBy(student -> student.getDepartmantName()));
-
-		studentsByDepartmentNames.entrySet().stream().forEach(entry -> {
-			System.out.println("Department : " + entry.getKey());
-			entry.getValue().stream().forEach(e -> System.out.println(e));
+		Map<String, List<Student>> studentsByDepartmentName = students.stream()
+				.collect(Collectors.groupingBy(Student::getDepartmantName));
+		studentsByDepartmentName.entrySet().stream().forEach(entry -> {
 			System.out.println();
+			System.out.println("Department : " + entry.getKey());
+			entry.getValue().forEach(v -> System.out.println(v));
 		});
 	}
 
 	private static void findTotalCountofStudents(List<Student> students) {
-		System.out.println(students.stream().count());
+		Long count = students.stream().count();
+		System.out.println("Total Count of Students : " + count);
 	}
 
 	private static void findMaxAgeofStudents(List<Student> students) {
@@ -95,15 +124,17 @@ public class StreamQuestions {
 	}
 
 	private static void findAllDepartmentsNames(List<Student> students) {
-		students.stream().map(Student::getDepartmantName).collect(Collectors.toSet()).forEach(System.out::println);
+		students.stream().map(Student::getDepartmantName).collect(Collectors.toList()).forEach(d -> {
+			System.out.println("Department names : " + d);
+		});
+		;
 	}
 
 	private static void findCountofStudentsinEachDepartment(List<Student> students) {
 		Map<String, Long> countofStudentsinEachDepartment = students.stream()
-				.collect(Collectors.groupingBy(student -> student.getDepartmantName(), Collectors.counting()));
-
+				.collect(Collectors.groupingBy(Student::getDepartmantName, Collectors.counting()));
 		countofStudentsinEachDepartment.entrySet().stream().forEach(entry -> {
-			System.out.println("Department : " + entry.getKey() + " and count is " + entry.getValue());
+			System.out.println("Student count in dept : " + entry.getKey() + " is " + entry.getValue());
 		});
 	}
 
@@ -113,54 +144,52 @@ public class StreamQuestions {
 	}
 
 	private static void findStudentsRankBetween60and100(List<Student> students) {
-		students.stream().filter(student -> student.getRank() > 60 && student.getAge() < 100)
+		students.stream().filter(student -> student.getRank() > 60 && student.getRank() < 100)
 				.collect(Collectors.toList()).forEach(System.out::println);
 	}
 
 	private static void findAverageAgeofMaleandFemale(List<Student> students) {
-		Map<String, Double> averageAgeofMaleandFemale = students.stream().collect(Collectors
-				.groupingBy(student -> student.getGender(), Collectors.averagingDouble(student -> student.getAge())));
-
+		Map<String, Double> averageAgeofMaleandFemale = students.stream()
+				.collect(Collectors.groupingBy(Student::getGender, Collectors.averagingDouble(Student::getAge)));
 		averageAgeofMaleandFemale.entrySet().stream().forEach(entry -> {
-			System.out.println("Gender : " + entry.getKey() + " and average age is " + entry.getValue());
+			System.out.println("Average age of " + entry.getKey() + " is " + entry.getValue());
 		});
 	}
 
 	private static void findDepartmentwithMaxNumberofStudents(List<Student> students) {
-		Map<String, Long> departmentwithMaxNumberofStudents = students.stream()
-				.collect(Collectors.groupingBy(student -> student.getDepartmantName(), Collectors.counting()));
-		String department = departmentwithMaxNumberofStudents.entrySet().stream().max(Map.Entry.comparingByValue())
-				.get().getKey();
-		Long count = departmentwithMaxNumberofStudents.entrySet().stream().max(Map.Entry.comparingByValue()).get()
-				.getValue();
-		System.out.println(department + " and count is " + count);
+		Map<String, Long> map = students.stream()
+				.collect(Collectors.groupingBy(Student::getDepartmantName, Collectors.counting()));
+
+		Map.Entry<String, Long> student = map.entrySet().stream().max(Map.Entry.comparingByValue()).get();
+		System.out.println(
+				"Department " + student.getKey() + " has max number of student with count " + student.getValue());
 	}
 
 	private static void findAverageRankinAllDepartments(List<Student> students) {
-		Map<String, Double> averageRankinAllDepartments = students.stream().collect(Collectors.groupingBy(
-				student -> student.getDepartmantName(), Collectors.averagingLong(student -> student.getRank())));
+		Map<String, Double> averageRankinAllDepartments = students.stream().collect(
+				Collectors.groupingBy(Student::getDepartmantName, Collectors.averagingDouble(Student::getRank)));
 		averageRankinAllDepartments.entrySet().stream().forEach(entry -> {
-			System.out.println("Department : " + entry.getKey() + " and average rank is " + entry.getValue());
+			System.out.println("Average Rank in Department " + entry.getKey() + " is " + entry.getValue());
 		});
 	}
 
 	private static void findHighestRankinEachDepartment(List<Student> students) {
-		Map<String, Optional<Student>> highestRankinEachDepartment = students.stream().collect(Collectors.groupingBy(
-				student -> student.getDepartmantName(), Collectors.maxBy(Comparator.comparingInt(s -> s.getRank()))));
+		Map<String, Optional<Student>> highestRankinEachDepartment = students.stream().collect(Collectors
+				.groupingBy(Student::getDepartmantName, Collectors.maxBy(Comparator.comparingInt(Student::getRank))));
 		highestRankinEachDepartment.entrySet().stream().forEach(entry -> {
-			System.out.println(
-					"Department : " + entry.getKey() + " and highest rank is " + entry.getValue().get().getRank());
+			System.out.println("Highest rank in dept " + entry.getKey() + " is " + entry.getValue().get().getRank());
 		});
 	}
 
 	private static void findStudentsandSortbyRank(List<Student> students) {
-		students.stream().sorted(Comparator.comparingInt(s -> s.getRank())).collect(Collectors.toList())
+		students.stream().sorted(Comparator.comparingInt(Student::getRank).reversed()).collect(Collectors.toList())
 				.forEach(System.out::println);
 	}
 
 	private static void findStudentWhoHasSecondRank(List<Student> students) {
-		Student student = students.stream().sorted(Comparator.comparingInt(Student::getRank)).skip(1).findFirst().get();
-		System.out.println(student);
+		Student student = students.stream().sorted(Comparator.comparingInt(Student::getRank).reversed()).skip(1)
+				.findFirst().get();
+		System.out.println("Student with second rank is " + student);
 	}
 
 	private static void findStudentsStayinginNewYorkandSortbyName(List<Student> students) {
